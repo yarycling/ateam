@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('STOTAGE_CHILD_VERSION', '1.0.12');
+define('STOTAGE_CHILD_VERSION', '1.0.15');
 define('STOTAGE_CHILD_DIR', get_stylesheet_directory());
 define('STOTAGE_CHILD_URI', get_stylesheet_directory_uri());
 
@@ -19,7 +19,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style(
         'stotage-child-style',
         get_stylesheet_uri(),
-        array('stotage-style'),
+        array(),
         STOTAGE_CHILD_VERSION
     );
 }, 20);
