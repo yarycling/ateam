@@ -8,30 +8,234 @@ Version: 1.0.0
 Text Domain: stotage-child
 */
 
-.ateam-vip-home-section {
-    background: #080000;
-    margin: 0;
+.ateam-vip-event-editable {
+    background:
+        radial-gradient(circle at 80% 12%, rgba(255, 42, 159, .22), transparent 30%),
+        radial-gradient(circle at 20% 72%, rgba(255, 74, 28, .28), transparent 32%),
+        linear-gradient(105deg, rgba(12, 0, 8, .96), rgba(60, 0, 11, .92) 52%, rgba(11, 0, 7, .98));
+    isolation: isolate;
     margin-left: calc(50% - 50vw);
+    min-height: 760px;
     overflow: hidden;
+    position: relative;
     width: 100vw;
 }
 
-.ateam-vip-home-section a {
-    display: block;
-    text-decoration: none;
+.ateam-vip-event-editable::before {
+    background:
+        linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+    background-size: 78px 78px;
+    content: '';
+    inset: 0;
+    opacity: .24;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
 }
 
-.ateam-vip-home-section img {
-    display: block;
-    height: auto;
+.ateam-vip-event-inner {
+    display: grid;
+    gap: clamp(30px, 4vw, 70px);
+    grid-template-columns: minmax(0, 1fr) minmax(360px, .95fr);
     margin: 0 auto;
-    width: 100%;
+    max-width: 1720px;
+    min-height: inherit;
+    padding: clamp(70px, 8vw, 120px) clamp(28px, 5vw, 80px);
+}
+
+.ateam-vip-event-left,
+.ateam-vip-event-right {
+    position: relative;
+    z-index: 1;
+}
+
+.ateam-vip-event-left {
+    align-content: center;
+    display: grid;
+}
+
+.ateam-vip-kicker .elementor-widget-container {
+    color: #f6d7d0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 12px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.ateam-vip-title .elementor-heading-title {
+    color: #ffffff;
+    font-size: clamp(42px, 4.6vw, 78px);
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: .98;
+    margin: 0;
+    text-shadow: 0 10px 35px rgba(0, 0, 0, .35);
+}
+
+.ateam-vip-title .elementor-heading-title span {
+    color: #ff442f;
+    display: block;
+}
+
+.ateam-vip-neon .elementor-heading-title {
+    color: #ff4b34;
+    font-family: "Instrument Serif", "Georgia", serif;
+    font-size: clamp(56px, 6.4vw, 112px);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: .95;
+    margin: 12px 0 28px;
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, .8),
+        0 0 20px rgba(255, 34, 214, .75),
+        0 0 38px rgba(255, 74, 24, .95);
+}
+
+.ateam-vip-info-row {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 26px;
+}
+
+.ateam-vip-info-card .elementor-widget-container {
+    align-items: center;
+    background: rgba(120, 8, 8, .42);
+    border: 1px solid rgba(255, 88, 54, .6);
+    border-radius: 8px;
+    color: #ffffff;
+    display: flex;
+    font-size: 15px;
+    font-weight: 800;
+    gap: 14px;
+    line-height: 1.25;
+    min-height: 72px;
+    padding: 16px 20px;
+}
+
+.ateam-vip-info-card strong {
+    color: #ff4b34;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.ateam-vip-copy .elementor-widget-container {
+    color: #ffffff;
+    font-size: clamp(18px, 1.25vw, 23px);
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
+
+.ateam-vip-copy .elementor-widget-container strong {
+    color: #ff442f;
+}
+
+.ateam-vip-ticket-card .elementor-widget-container {
+    background: linear-gradient(105deg, rgba(102, 10, 10, .72), rgba(30, 0, 4, .7));
+    border: 1px solid rgba(255, 78, 34, .78);
+    border-radius: 10px;
+    box-shadow: inset 0 0 30px rgba(255, 75, 28, .16), 0 0 40px rgba(255, 32, 16, .18);
+    color: #ffffff;
+    font-size: clamp(18px, 1.35vw, 25px);
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 26px;
+    padding: 22px 28px;
+}
+
+.ateam-vip-ticket-card .elementor-widget-container span {
+    color: #ff4b34;
+}
+
+.ateam-vip-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ateam-vip-primary-button .elementor-button,
+.ateam-vip-secondary-button .elementor-button {
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 800;
+    min-width: 210px;
+    padding: 20px 34px;
+}
+
+.ateam-vip-primary-button .elementor-button {
+    background: linear-gradient(135deg, #ff662f, #f93222);
+    color: #ffffff;
+}
+
+.ateam-vip-secondary-button .elementor-button {
+    background: rgba(7, 0, 0, .42);
+    border: 1px solid #ff4b34;
+    color: #ffffff;
+}
+
+.ateam-vip-tags .elementor-widget-container {
+    border-top: 1px solid rgba(255, 255, 255, .25);
+    color: rgba(255, 255, 255, .88);
+    font-size: 14px;
+    margin-top: 46px;
+    padding-top: 22px;
+    word-spacing: 14px;
+}
+
+.ateam-vip-event-right {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.ateam-vip-logo-image img {
+    filter: drop-shadow(0 0 35px rgba(255, 62, 31, .55));
+    max-height: 650px;
+    object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+    .ateam-vip-event-inner {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+    }
+
+    .ateam-vip-event-right {
+        order: -1;
+    }
+
+    .ateam-vip-logo-image img {
+        max-height: 420px;
+    }
 }
 
 @media (max-width: 767px) {
-    .ateam-vip-home-section img {
-        max-width: none;
-        transform: translateX(-25%);
-        width: 175%;
+    .ateam-vip-event-editable {
+        min-height: 0;
+    }
+
+    .ateam-vip-event-inner {
+        gap: 24px;
+        padding: 50px 18px;
+    }
+
+    .ateam-vip-kicker .elementor-widget-container {
+        letter-spacing: 6px;
+    }
+
+    .ateam-vip-info-row {
+        grid-template-columns: 1fr;
+    }
+
+    .ateam-vip-button-row {
+        display: grid;
+    }
+
+    .ateam-vip-primary-button .elementor-button,
+    .ateam-vip-secondary-button .elementor-button {
+        width: 100%;
     }
 }
