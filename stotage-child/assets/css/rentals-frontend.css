@@ -1,0 +1,634 @@
+.page-id-12015 #pxl-page-title-elementor,
+.page-slug-rentals #pxl-page-title-elementor,
+.page-rentals #pxl-page-title-elementor {
+    display: none !important;
+}
+
+.page-id-12015 .ateam-rentals-main,
+.page-slug-rentals .ateam-rentals-main,
+.page-rentals .ateam-rentals-main {
+    margin-top: -150px;
+}
+
+.ateam-rentals-page {
+    background: #050505;
+    color: #fff;
+}
+
+.ateam-rentals-shell {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.ateam-rentals-hero,
+.ateam-rentals-cta {
+    position: relative;
+}
+
+.ateam-rentals-hero::before,
+.ateam-rentals-cta::before {
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.82)),
+        var(--hero-image, none);
+    background-position: center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    opacity: 1;
+    position: absolute;
+}
+
+.ateam-rentals-hero::after {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10, 5, 5, 0) 0%,
+            rgba(10, 8, 8, 0.18) 24%,
+            rgba(8, 8, 8, 0.56) 54%,
+            rgba(4, 4, 4, 0.9) 82%,
+            #050505 100%
+        );
+    bottom: 0;
+    content: "";
+    height: 180px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.ateam-rentals-cta::before {
+    background-image:
+        linear-gradient(180deg, rgba(90, 10, 10, 0.78), rgba(8, 8, 8, 0.86)),
+        var(--cta-image, none);
+}
+
+.ateam-rentals-hero {
+    overflow: hidden;
+    padding: 250px 0 80px;
+    text-align: center;
+}
+
+.ateam-rentals-breadcrumb {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.ateam-rentals-breadcrumb span {
+    color: #ff9f60;
+    margin: 0 8px;
+}
+
+.ateam-rentals-hero h1,
+.ateam-rentals-section h2,
+.ateam-rentals-cta h2 {
+    color: #fff;
+    font-family: "Bubblegum Sans", cursive;
+    font-size: clamp(42px, 5vw, 76px);
+    line-height: 1;
+    margin: 0;
+}
+
+.ateam-rentals-section h2,
+.ateam-rentals-cta h2 {
+    font-size: clamp(34px, 4vw, 52px);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.ateam-rentals-hero p,
+.ateam-rentals-section p,
+.ateam-rentals-section li,
+.ateam-rentals-cta p {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+.ateam-rentals-hero-intro {
+    margin-top: var(--hero-intro-spacing, 20px);
+}
+
+.ateam-rentals-hero-intro p {
+    margin-bottom: 0;
+}
+
+.ateam-rentals-divider {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 18px 0 20px;
+}
+
+.ateam-rentals-divider--image {
+    margin: 18px 0 20px;
+}
+
+.ateam-rentals-divider-image {
+    display: block;
+    height: auto;
+    max-width: min(130px, 34vw);
+    width: 100%;
+}
+
+.ateam-rentals-divider span {
+    background: linear-gradient(90deg, transparent, #ff4a26 22%, #ffb060 50%, #ff4a26 78%, transparent);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 220px;
+}
+
+.ateam-rentals-divider span::after {
+    color: #ff4a26;
+    content: "✦";
+    font-size: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -56%);
+}
+
+.ateam-rentals-hero .ateam-rentals-shell > p:last-child,
+.ateam-rentals-hero .ateam-rentals-shell > div:last-child {
+    margin-bottom: 0;
+}
+
+.ateam-rentals-button {
+    background: linear-gradient(135deg, #e33818, #ff6b29);
+    border: 1px solid rgba(255, 193, 146, 0.45);
+    border-radius: 999px;
+    box-shadow: 0 18px 42px rgba(195, 48, 13, 0.3);
+    color: #fff;
+    display: inline-flex;
+    font-size: 15px;
+    font-weight: 700;
+    gap: 8px;
+    letter-spacing: 0.04em;
+    padding: 14px 24px;
+    text-transform: uppercase;
+}
+
+.ateam-rentals-button:hover {
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.ateam-rentals-section {
+    background: transparent;
+    padding: 30px 0 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.ateam-rentals-pricing {
+    margin-top: -74px;
+    padding-top: 78px;
+}
+
+.ateam-rentals-section-intro {
+    margin: 0 auto 30px;
+    max-width: 760px;
+    text-align: center;
+}
+
+.ateam-rentals-price-grid,
+.ateam-rentals-item-grid {
+    display: grid;
+    gap: 22px;
+}
+
+.ateam-rentals-price-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 26px auto 0;
+    max-width: 980px;
+}
+
+.ateam-rentals-price-card,
+.ateam-rentals-item-card {
+    background:
+        linear-gradient(180deg, rgba(255, 110, 43, 0.08), rgba(255, 110, 43, 0.02)),
+        rgba(9, 9, 9, 0.92);
+    border: 1px solid rgba(236, 78, 35, 0.52);
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 1px rgba(255, 173, 123, 0.05), 0 24px 70px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+    position: relative;
+}
+
+.ateam-rentals-price-card {
+    min-height: 185px;
+    padding: 0;
+    text-align: left;
+}
+
+.ateam-rentals-price-card {
+    background-image: var(--price-card-image, none);
+    background-position: center;
+    background-size: cover;
+}
+
+.ateam-rentals-price-card__inner {
+    align-items: center;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 76px minmax(0, 1fr);
+    min-height: 185px;
+    padding: 18px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.ateam-rentals-price-card::after,
+.ateam-rentals-item-card::after {
+    background:
+        radial-gradient(circle at 12% 100%, rgb(11, 10, 10), transparent 20%),
+        radial-gradient(circle at 86% 100%, rgba(12, 11, 11, 0.5), transparent 20%);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.ateam-rentals-card-kicker {
+    color: #fff;
+    font-family: inherit;
+    font-size: 12px !important;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.ateam-rentals-price-card h3 {
+    color: #fff;
+    font-family: inherit;
+    font-size: clamp(38px, 3vw, 52px);
+    font-weight: 700;
+    line-height: 0.92;
+    margin: 0 0 6px;
+}
+
+.ateam-rentals-price-unit {
+    color: #ffb889 !important;
+    font-family: inherit;
+    font-size: 14px !important;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px !important;
+    text-transform: uppercase;
+}
+
+.ateam-rentals-price-icon,
+.ateam-rentals-item-icon {
+    align-items: center;
+    color: #ff5b35;
+    display: inline-flex;
+    font-size: 28px;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.ateam-rentals-price-icon {
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.ateam-rentals-price-icon__disc {
+    align-items: center;
+    background: radial-gradient(circle at 50% 40%, rgba(42, 20, 16, 0.96), rgba(12, 10, 10, 0.98));
+    border-radius: 999px;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34), inset 0 0 0 1px rgba(255, 102, 59, 0.18);
+    display: inline-flex;
+    height: 58px;
+    justify-content: center;
+    width: 58px;
+}
+
+.ateam-rentals-price-icon__disc i {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.ateam-rentals-icon-image {
+    display: block;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+.ateam-rentals-price-copy {
+    max-width: 250px;
+    text-align: center;
+}
+
+.ateam-rentals-price-description {
+    color: rgba(255, 255, 255, 0.96) !important;
+    font-family: inherit;
+    font-size: 13px !important;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.ateam-rentals-category-block {
+    margin-top: 36px;
+}
+
+.ateam-rentals-item-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 22px;
+}
+
+.ateam-rentals-item-card {
+    min-height: 280px;
+}
+
+.ateam-rentals-item-card__overlay {
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.86)),
+        var(--card-image, none);
+    background-position: center;
+    background-size: cover;
+    inset: 0;
+    opacity: 0.95;
+    position: absolute;
+}
+
+.ateam-rentals-item-card__content {
+    min-height: 100%;
+    padding: 28px 30px 28px;
+    position: relative;
+    z-index: 2;
+}
+
+.ateam-rentals-item-card__layout {
+    column-gap: 14px;
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+    min-height: 100%;
+    row-gap: 10px;
+}
+
+.ateam-rentals-item-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 100%;
+}
+
+.ateam-rentals-item-card h3 {
+    color: #ff6340;
+    font-family: "Bubblegum Sans", cursive;
+    font-size: 30px;
+    line-height: 1;
+    margin: 0;
+}
+
+.ateam-rentals-item-description {
+    color: rgba(255, 231, 221, 0.9) !important;
+    font-size: 14px !important;
+    margin: 0;
+}
+
+.ateam-rentals-item-icon {
+    align-items: flex-start;
+    font-size: 52px;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    padding-top: 4px;
+}
+
+.ateam-rentals-item-icon .ateam-rentals-icon-image {
+    max-width: 64px;
+}
+
+.ateam-rentals-item-card ul {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ateam-rentals-item-card li {
+    color: rgba(255, 255, 255, 0.98);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.45;
+    padding-left: 40px;
+    position: relative;
+}
+
+.ateam-rentals-item-card li::before {
+    border: 2px solid #ff4f2d;
+    border-radius: 999px;
+    color: #ff4f2d;
+    content: "\2713";
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 700;
+    height: 22px;
+    justify-content: center;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    top: 2px;
+    width: 22px;
+}
+
+.ateam-rentals-cta {
+    margin-top: 16px;
+    overflow: hidden;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.ateam-rentals-cta .ateam-rentals-shell {
+    max-width: 820px;
+}
+
+@media (max-width: 991px) {
+    .page-id-12015 .ateam-rentals-main,
+    .page-slug-rentals .ateam-rentals-main,
+    .page-rentals .ateam-rentals-main {
+        margin-top: -120px;
+    }
+
+    .ateam-rentals-hero {
+        padding: 210px 0 60px;
+    }
+
+    .ateam-rentals-hero::after {
+        height: 140px;
+    }
+
+    .ateam-rentals-section {
+        padding-bottom: 60px;
+    }
+
+    .ateam-rentals-price-grid {
+        grid-template-columns: 1fr;
+        max-width: 720px;
+    }
+
+    .ateam-rentals-price-card,
+    .ateam-rentals-price-card__inner {
+        min-height: 0;
+    }
+
+    .ateam-rentals-price-card__inner {
+        gap: 14px;
+        grid-template-columns: 72px minmax(0, 1fr);
+        padding: 16px 16px 14px;
+    }
+
+    .ateam-rentals-price-copy {
+        max-width: 100%;
+    }
+
+    .ateam-rentals-price-card h3 {
+        font-size: clamp(34px, 6vw, 46px);
+    }
+
+    .ateam-rentals-price-description {
+        font-size: 12px !important;
+    }
+
+    .ateam-rentals-pricing {
+        margin-top: -56px;
+        padding-top: 62px;
+    }
+
+    .ateam-rentals-item-card h3 {
+        font-size: 26px;
+    }
+
+    .ateam-rentals-item-card__layout {
+        column-gap: 18px;
+        grid-template-columns: 88px minmax(0, 1fr);
+    }
+
+    .ateam-rentals-item-icon {
+        font-size: 46px;
+    }
+
+    .ateam-rentals-item-card li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-id-12015 .ateam-rentals-main,
+    .page-slug-rentals .ateam-rentals-main,
+    .page-rentals .ateam-rentals-main {
+        margin-top: -92px;
+    }
+
+    .ateam-rentals-shell {
+        padding: 0 16px;
+    }
+
+    .ateam-rentals-hero {
+        padding: 170px 0 54px;
+    }
+
+    .ateam-rentals-hero::after {
+        height: 110px;
+    }
+
+    .ateam-rentals-hero p,
+    .ateam-rentals-section p,
+    .ateam-rentals-section li,
+    .ateam-rentals-cta p {
+        font-size: 16px;
+    }
+
+    .ateam-rentals-price-card__inner {
+        gap: 18px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 24px 20px;
+        text-align: center;
+    }
+
+    .ateam-rentals-price-icon__disc {
+        height: 54px;
+        width: 54px;
+    }
+
+    .ateam-rentals-price-icon__disc i {
+        font-size: 24px;
+    }
+
+    .ateam-rentals-card-kicker {
+        font-size: 11px !important;
+        margin-bottom: 8px;
+    }
+
+    .ateam-rentals-price-card h3 {
+        font-size: 36px;
+    }
+
+    .ateam-rentals-price-description {
+        font-size: 12px !important;
+    }
+
+    .ateam-rentals-item-card__content {
+        padding: 22px 20px;
+    }
+
+    .ateam-rentals-item-card__layout {
+        grid-template-columns: 1fr;
+        row-gap: 14px;
+    }
+
+    .ateam-rentals-item-copy {
+        gap: 10px;
+    }
+
+    .ateam-rentals-item-icon {
+        justify-content: flex-start;
+        padding-top: 0;
+    }
+
+    .ateam-rentals-item-card h3 {
+        font-size: 24px;
+    }
+
+    .ateam-rentals-item-card li {
+        font-size: 15px;
+        padding-left: 34px;
+    }
+
+    .ateam-rentals-item-card li::before {
+        font-size: 11px;
+        height: 20px;
+        top: 1px;
+        width: 20px;
+    }
+
+    .ateam-rentals-pricing {
+        margin-top: -40px;
+        padding-top: 48px;
+    }
+
+    .ateam-rentals-price-card,
+    .ateam-rentals-item-card__content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ateam-rentals-item-card {
+        min-height: 0;
+    }
+}

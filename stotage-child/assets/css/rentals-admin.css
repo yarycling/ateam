@@ -1,0 +1,109 @@
+.ateam-rentals-wrap {
+    max-width: 1320px;
+}
+
+.ateam-rentals-dashboard-grid,
+.ateam-rentals-admin-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin-top: 24px;
+}
+
+.ateam-rentals-panel {
+    background: #fff;
+    border: 1px solid #d9d9de;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 12px 40px rgba(14, 16, 21, 0.06);
+}
+
+.ateam-rentals-form {
+    display: grid;
+    gap: 16px;
+}
+
+.ateam-rentals-form label,
+.ateam-rentals-media-field {
+    display: grid;
+    gap: 8px;
+}
+
+.ateam-rentals-form label span,
+.ateam-rentals-media-field > span {
+    font-weight: 600;
+}
+
+.ateam-rentals-form input[type="text"],
+.ateam-rentals-form input[type="url"],
+.ateam-rentals-form input[type="number"],
+.ateam-rentals-form select,
+.ateam-rentals-form textarea {
+    width: 100%;
+}
+
+.ateam-rentals-checkbox {
+    align-items: center;
+    display: flex !important;
+    gap: 10px;
+}
+
+.ateam-rentals-checkbox span {
+    margin: 0;
+}
+
+.ateam-rentals-icon-fields {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.ateam-rentals-media-preview {
+    align-items: center;
+    background: #f6f7f7;
+    border: 1px dashed #c3c4c7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    min-height: 120px;
+    overflow: hidden;
+    padding: 12px;
+}
+
+.ateam-rentals-media-preview img {
+    display: block;
+    max-height: 180px;
+    width: auto;
+}
+
+.ateam-rentals-inline-form {
+    display: inline;
+}
+
+.ateam-rentals-inline-notice {
+    border-radius: 6px;
+    margin: 0 0 16px;
+    min-height: 22px;
+    padding: 8px 10px;
+}
+
+.ateam-rentals-inline-notice.is-success {
+    background: #edf7ed;
+    color: #1e6c30;
+}
+
+.ateam-rentals-inline-notice.is-error {
+    background: #fcf0f1;
+    color: #b32d2e;
+}
+
+.ateam-rentals-sortable tr {
+    cursor: move;
+}
+
+.ateam-rentals-icon-list code {
+    background: #f6f7f7;
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+

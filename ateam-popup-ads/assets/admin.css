@@ -1,0 +1,85 @@
+.ateam-popup-admin .widefat {
+    margin-top: 16px;
+}
+
+.ateam-popup-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 18px;
+}
+
+.ateam-popup-panel {
+    background: #fff;
+    border: 1px solid #dcdcde;
+    box-sizing: border-box;
+    margin-top: 18px;
+    padding: 18px;
+}
+
+.ateam-popup-panel h2 {
+    margin: 0 0 16px;
+}
+
+.ateam-popup-form label,
+.ateam-popup-media-field {
+    display: grid;
+    gap: 7px;
+    margin-bottom: 14px;
+}
+
+.ateam-popup-form label > span,
+.ateam-popup-media-field > span {
+    font-weight: 600;
+}
+
+.ateam-popup-form input[type="text"],
+.ateam-popup-form input[type="url"],
+.ateam-popup-form input[type="number"],
+.ateam-popup-form select,
+.ateam-popup-form textarea {
+    max-width: 720px;
+    width: 100%;
+}
+
+.ateam-popup-check {
+    align-items: center;
+    display: flex !important;
+    gap: 8px;
+}
+
+.ateam-popup-check input {
+    margin: 0;
+}
+
+.ateam-popup-pages {
+    border: 1px solid #dcdcde;
+    display: grid;
+    gap: 8px;
+    max-height: 260px;
+    overflow: auto;
+    padding: 12px;
+}
+
+.ateam-popup-pages.is-disabled {
+    opacity: .55;
+}
+
+.ateam-popup-media-preview {
+    align-items: center;
+    background: #f6f7f7;
+    border: 1px dashed #c3c4c7;
+    display: flex;
+    min-height: 42px;
+    padding: 8px 10px;
+}
+
+.ateam-popup-row-form {
+    display: inline;
+}
+
+@media (max-width: 900px) {
+    .ateam-popup-grid {
+        grid-template-columns: 1fr;
+    }
+}
