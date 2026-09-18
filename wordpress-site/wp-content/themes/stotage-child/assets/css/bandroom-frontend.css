@@ -1,0 +1,44 @@
+.page-bandroom #pxl-page-title-elementor,
+.page-id-12264 #pxl-page-title-elementor { display: none !important; }
+.page-id-12264,
+.page-id-12264 #pxl-wapper,
+.page-id-12264 #pxl-content-main,
+.page-id-12264 .ateam-bandroom-page { background-color: #000000; }
+.page-bandroom .ateam-bandroom-main,
+.page-id-12264 .ateam-bandroom-main { margin-top: 0; }
+.ateam-bandroom-page { background: #080a0a; color: #f7f7f7; font-family: inherit; overflow: hidden; }
+.ateam-bandroom-wrap { margin: 0 auto; max-width: 1220px; padding: 0 28px; position: relative; width: 100%; z-index: 2; }
+.ateam-bandroom-hero { background: #080909; min-height: 610px; padding: 82px 0 58px; position: relative; }
+.ateam-bandroom-hero::before { background-image: linear-gradient(90deg, rgba(4,8,8,.96) 0%, rgba(5,8,8,.78) 40%, rgba(5,7,7,.17) 78%), linear-gradient(0deg, #080a0a 0%, transparent 28%), var(--bandroom-hero, none); background-position: center; background-size: cover; content: ''; inset: 0; position: absolute; }
+.ateam-bandroom-breadcrumb { color: #bfc1c2; font-size: 13px; letter-spacing: .08em; margin-bottom: 22px; text-transform: uppercase; }
+.ateam-bandroom-breadcrumb span, .ateam-bandroom-breadcrumb b { color: #e62427; font-weight: 600; margin-right: 10px; }
+.ateam-bandroom-hero h1 { color: #fff; font-size: clamp(48px, 6.3vw, 80px); font-weight: 800; letter-spacing: .02em; line-height: .98; margin: 0; max-width: 590px; text-transform: uppercase; }
+.ateam-bandroom-tags { color: #fff; font-size: 18px; font-weight: 600; letter-spacing: .17em; margin: 18px 0 22px; text-transform: uppercase; }
+.ateam-bandroom-hero-text { color: #eef0f0; font-size: 17px; line-height: 1.5; margin: 0; max-width: 370px; }
+.ateam-bandroom-pricing { align-items: center; background: rgba(10,13,13,.88); border: 1px solid rgba(222,225,225,.22); border-radius: 14px; display: grid; gap: 25px; grid-template-columns: 82px 1fr 1px 1fr 1.75fr; margin-top: 40px; max-width: 1120px; padding: 20px 28px; }
+.ateam-bandroom-dollar { align-items: center; border: 3px solid #ec2027; border-radius: 50%; color: #fff; display: flex; font-family: Georgia, serif; font-size: 47px; height: 72px; justify-content: center; width: 72px; }
+.ateam-bandroom-rate { display: grid; gap: 2px; }
+.ateam-bandroom-rate strong { color: #fff; font-size: 47px; font-weight: 800; line-height: 1; }
+.ateam-bandroom-rate span { color: #ec2027; font-size: 15px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
+.ateam-bandroom-divider { background: rgba(255,255,255,.55); height: 68px; }
+.ateam-bandroom-booking a, .ateam-bandroom-cta a { align-items: center; border: 2px solid #e82327; border-radius: 4px; color: #fff; display: inline-flex; font-size: 15px; font-weight: 700; gap: 10px; justify-content: center; letter-spacing: .06em; padding: 12px 20px; text-transform: uppercase; }
+.ateam-bandroom-booking a:hover { background: #e82327; color: #fff; }
+.ateam-bandroom-booking p { color: #d5d8d8; font-size: 14px; line-height: 1.4; margin: 10px 0 0; max-width: 260px; }
+.ateam-bandroom-features { background: linear-gradient(90deg, #040808 0%, #080909 100%); padding: 30px 0 80px; }
+.ateam-bandroom-feature-list { background: linear-gradient(140deg, rgba(20, 30, 29, 0), rgba(6, 8, 8, 0.04)); border: 1px solid rgba(78, 77, 77, 0.2); border-radius: 14px; overflow: hidden; padding: 0 18px; }
+.ateam-bandroom-feature { align-items: center; border-bottom: 1px solid rgba(83, 79, 79, 0.19); display: grid; gap: 30px; grid-template-columns: minmax(320px,.86fr) minmax(400px,1.14fr); min-height: 154px; padding: 12px 0; }
+.ateam-bandroom-feature:last-child { border-bottom: 0; }
+.ateam-bandroom-feature-copy { align-items: flex-start; display: grid; gap: 20px; grid-template-columns: 62px 1fr; padding: 10px 4px; }
+.ateam-bandroom-feature-copy > i { color: #ec2027; font-size: 42px; padding-top: 5px; text-align: center; }
+.ateam-bandroom-feature h2 { color: #fff; font-size: 24px; font-weight: 750; line-height: 1.1; margin: 0 0 7px; text-transform: uppercase; }
+.ateam-bandroom-feature p { color: #d8dada; font-size: 15px; line-height: 1.55; margin: 0; }
+.ateam-bandroom-feature-image { background-color: #111; background-position: center; background-repeat: no-repeat; background-size: cover; border: 0; border-radius: 7px; height: 130px; position: relative; }
+.ateam-bandroom-feature-image::after { background: linear-gradient(90deg, rgba(0,0,0,.2), transparent 50%, rgba(0,0,0,.18)); content: ''; inset: 0; position: absolute; }
+.ateam-bandroom-cta { align-items: center; background-color: transparent; background-image: linear-gradient(90deg, rgba(8,13,13,.95), rgba(8,13,13,.62)), var(--bandroom-cta, none); background-position: center; background-size: cover; border: 1px solid rgb(29, 28, 28); border-radius: 12px; display: flex; justify-content: space-between; margin-top: 32px; overflow: hidden; padding: 30px 40px; }
+.ateam-bandroom-cta h2 { color: #fff; font-size: 26px; line-height: 1.1; margin: 0 0 7px; }
+.ateam-bandroom-cta p { color: #fff; font-size: 15px; line-height: 1.45; margin: 0; max-width: 420px; }
+.ateam-bandroom-cta a { background: #df2025; border-color: #df2025; min-width: 190px; }
+.ateam-bandroom-cta a:hover { background: #fff; border-color: #fff; color: #161616; }
+.ateam-bandroom-cta a span { font-size: 26px; line-height: .5; }
+@media (max-width: 991px) { .ateam-bandroom-hero { padding-top: 90px; } .ateam-bandroom-pricing { grid-template-columns: 72px 1fr 1px 1fr; } .ateam-bandroom-booking { grid-column: 2 / -1; } .ateam-bandroom-feature { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 767px) { .ateam-bandroom-wrap { padding: 0 18px; } .ateam-bandroom-hero { min-height: 0; padding: 70px 0 45px; } .ateam-bandroom-hero h1 { font-size: 48px; } .ateam-bandroom-tags { font-size: 13px; line-height: 1.7; } .ateam-bandroom-pricing { gap: 18px; grid-template-columns: 58px 1fr; padding: 20px; } .ateam-bandroom-dollar { font-size: 38px; height: 58px; width: 58px; } .ateam-bandroom-rate strong { font-size: 38px; } .ateam-bandroom-divider { display: none; } .ateam-bandroom-booking { grid-column: 1 / -1; } .ateam-bandroom-feature-list { padding: 0 14px; } .ateam-bandroom-feature { gap: 8px; grid-template-columns: 1fr; padding: 20px 0; } .ateam-bandroom-feature-image { height: 180px; order: -1; } .ateam-bandroom-feature-copy { gap: 14px; grid-template-columns: 44px 1fr; } .ateam-bandroom-feature-copy > i { font-size: 34px; } .ateam-bandroom-feature h2 { font-size: 21px; } .ateam-bandroom-cta { align-items: flex-start; flex-direction: column; gap: 20px; padding: 25px; } }

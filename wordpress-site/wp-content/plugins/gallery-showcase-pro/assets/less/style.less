@@ -1,0 +1,344 @@
+.font_size(@font_size, @per) when (@font_size > 0) {
+    @f_size = floor(@font_size * @per);
+    font-size: ~"@{f_size}px";
+}
+.font_size(@font_size, @per) when (@font_size = 0) {
+    font-size: inherit;
+}
+.left_arrow_hori_pos(@hori_pos) when (@hori_pos = 2) {
+    left: calc(~"100% + " @left_arrow_hori_off);
+}
+.left_arrow_hori_pos(@hori_pos) when (@hori_pos = 1) {
+    left: calc(~"50% + " @left_arrow_hori_off);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.left_arrow_hori_pos(@hori_pos) when (@hori_pos = 0) {
+    left: @left_arrow_hori_off
+}
+
+.right_arrow_hori_pos(@hori_pos) when (@hori_pos = 0) {
+    right: calc(~"100% + " @right_arrow_hori_off);
+}
+.right_arrow_hori_pos(@hori_pos) when (@hori_pos = 1) {
+    right: calc(~"50% + " @right_arrow_hori_off);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.right_arrow_hori_pos(@hori_pos) when (@hori_pos = 2) {
+    right: @right_arrow_hori_off
+}
+
+.arrow_vert_pos(@vert_pos, @vert_off) when(@vert_pos = 0) {
+    top: @vert_off;
+    bottom: auto;
+}
+.arrow_vert_pos(@vert_pos, @vert_off) when(@vert_pos = 1) {
+    bottom: auto;
+    top: calc(~"50% + " @vert_off);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+}
+.arrow_vert_pos(@vert_pos, @vert_off) when(@vert_pos = 2) {
+    top: auto;
+    bottom: @vert_off;
+}
+
+.nav_hori_pos(@hori_pos, @hori_off) when(@hori_pos = 0) {
+    text-align: left;
+    left: @hori_off;
+}
+.nav_hori_pos(@hori_pos, @hori_off) when(@hori_pos = 1) {
+    text-align: center;
+    left: calc(~"50% + " @hori_off);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.nav_hori_pos(@hori_pos, @hori_off) when(@hori_pos = 2) {
+    text-align: right;
+    left: @hori_off;
+}
+
+.nav_vert_pos(@vert_pos, @vert_off) when(@vert_pos = 0) {
+    top: @vert_off;
+    bottom: 0;
+}
+.nav_vert_pos(@vert_pos, @vert_off) when(@vert_pos = 1) {
+    bottom: auto;
+    top: calc(~"50% + " @vert_off);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.nav_vert_pos(@vert_pos, @vert_off) when(@vert_pos = 2) {
+    top: auto;
+    bottom: @vert_off;
+}
+
+.@{layout} {
+//  .owl-carousel {
+    .@{layout_effect_group}.gspwp-content {
+        padding: @padding_top @padding_right @padding_bottom @padding_left;
+        
+    }
+    .filter-nav {
+        gap: @filter_title_gap;
+    }
+
+    .filter-nav .nav-item {
+        .font_size(@filter_title_font_size, 1);
+        color: @filter_title_font_color;
+        font-family: @filter_title_font;
+        font-style: @filter_title_font_italic;
+        font-weight: @filter_title_font_weight;
+        text-transform: @filter_title_text_transform;
+        text-decoration: @filter_title_text_decoration;
+        line-height: @filter_title_line_height;
+        letter-spacing: @filter_title_letter_spacing;
+        background-color: @filter_title_bg_color;
+        padding: @filter_padding_top @filter_padding_right @filter_padding_bottom @filter_padding_left;
+        
+        &:hover {
+            color: @filter_title_font_color_hover;
+            background-color: @filter_title_bg_color_hover;
+        }
+    }
+
+    .filter-nav .nav-item.active {
+        color: @filter_title_font_color_hover;
+        background-color: @filter_title_bg_color_hover;
+    }   
+
+    .inspirational.gspwp-content figure {
+        background: @layout_bg_color;
+    }
+    .inspirational.gspwp-content figure h2 {
+        .font_size(@title_font_size, 1);
+        color: @title_font_color;
+        font-family: @title_font;
+        font-style: @title_font_italic;
+        font-weight: @title_font_weight;
+        text-transform: @title_text_transform;
+        text-decoration: @title_text_decoration;
+        line-height: @title_line_height;
+        letter-spacing: @title_letter_spacing;
+    }
+    .inspirational.gspwp-content figure p {
+        .font_size(@content_font_size, 1);
+        color: @content_font_color;        
+        font-family: @content_font;
+        font-style: @content_font_italic;
+        font-weight: @content_font_weight;
+        text-transform: @content_text_transform;
+        text-decoration: @content_text_decoration;
+        line-height: @content_line_height;
+        letter-spacing: @content_letter_spacing;
+    }
+
+    .inspirational.apollo figure p {
+        border-color: @content_font_color;
+    }
+
+    .inspirational.bubba figure {
+        background-color: @layout_bg_color;
+    }
+    .inspirational.bubba figure figcaption:before,
+        .inspirational.bubba figure figcaption:after {
+        border-color: @layout_border_color;
+    }
+
+    .inspirational.chico figure figcaption:before {
+        border-color: @layout_border_color;
+    }
+
+    .inspirational.dexter figure figcaption:after {
+        border-color: @layout_border_color;
+    }
+    .inspirational.dexter figure {
+        background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%, @layout_bg_color 100%);
+        background: -moz-linear-gradient(top, rgba(37,141,200,1) 0%, @layout_bg_color 100%);
+        background: -ms-linear-gradient(top, rgba(37,141,200,1) 0%, @layout_bg_color 100%);
+        background: -o-linear-gradient(top, rgba(37,141,200,1) 0%, @layout_bg_color 100%);
+        background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,@layout_bg_color 100%);
+    }
+
+    .inspirational.duke figure {
+        background: -webkit-linear-gradient(-45deg, #34495e 0%,@layout_bg_color 100%);
+        background: -moz-linear-gradient(-45deg, #34495e 0%,@layout_bg_color 100%);
+        background: -ms-linear-gradient(-45deg, #34495e 0%,@layout_bg_color 100%);
+        background: -o-linear-gradient(-45deg, #34495e 0%,@layout_bg_color 100%);
+        background: linear-gradient(-45deg, #34495e 0%,@layout_bg_color 100%);
+    }
+    .inspirational.duke figure p {
+        border-color: @content_font_color;
+    }
+
+    .inspirational.jazz figure {
+        background: -webkit-linear-gradient(-45deg, #f3cf3f 0%,@layout_bg_color 100%);
+        background: -moz-linear-gradient(-45deg, #f3cf3f 0%,@layout_bg_color 100%);
+        background: -ms-linear-gradient(-45deg, #f3cf3f 0%,@layout_bg_color 100%);
+        background: -o-linear-gradient(-45deg, #f3cf3f 0%,@layout_bg_color 100%);
+        background: linear-gradient(-45deg, #f3cf3f 0%,@layout_bg_color 100%);
+    }
+    .inspirational.jazz figure figcaption:after {
+        border-color: @layout_border_color;
+    }
+
+    .inspirational.julia figure {
+        background: @layout_bg_color;
+    }
+    .inspirational.julia figure p {
+        background: @content_bg_color;
+    }
+
+    .inspirational.goliath figure {
+        background: @layout_bg_color;
+    }
+
+    .inspirational.layla figure {
+        background: @layout_bg_color;
+    }
+    .inspirational.layla figure figcaption:before,
+        .inspirational.layla figure figcaption:after {
+        border-color: @layout_border_color;
+    }
+
+    .inspirational.marley figure h2:after {
+        background: @title_font_color;
+    }
+
+    .inspirational.milo figure {
+        background: @layout_bg_color;
+    }
+    .inspirational.milo figure p {
+        border-color: @content_font_color;
+    }
+
+    .inspirational.ming figure {
+        background: @layout_bg_color;
+    }
+    .inspirational.ming figure figcaption:before {
+        border-color: @layout_border_color;
+    }
+
+    .inspirational.moses figure {
+        background: -webkit-linear-gradient(-45deg, #EC65B7 0%,@layout_bg_color 100%);
+        background: -moz-linear-gradient(-45deg, #EC65B7 0%,@layout_bg_color 100%);
+        background: -ms-linear-gradient(-45deg, #EC65B7 0%,@layout_bg_color 100%);
+        background: -o-linear-gradient(-45deg, #EC65B7 0%,@layout_bg_color 100%);
+        background: linear-gradient(-45deg, #EC65B7 0%,@layout_bg_color 100%);
+    }
+    .inspirational.moses figure h2 {
+
+        border-color: @title_font_color;
+    }
+    .inspirational.moses figure p {
+        border-color: @content_font_color;
+    }
+
+    .inspirational.oscar figure figcaption:before {
+        border-color: @layout_border_color;
+    }
+
+    .inspirational.ruby figure {
+        background: @layout_bg_color;
+    }
+    .inspirational.ruby figure p {
+        border-color: @content_font_color;
+    }
+
+    .inspirational.romeo figure figcaption:before,
+        .inspirational.romeo figure figcaption:after {
+        background: @layout_border_color;
+    }
+
+    .inspirational.roxy figure {
+        background: -webkit-linear-gradient(45deg, #ff89e9 0%, @layout_bg_color 100%);
+        background: -moz-linear-gradient(45deg, #ff89e9 0%, @layout_bg_color 100%);
+        background: -ms-linear-gradient(45deg, #ff89e9 0%, @layout_bg_color 100%);
+        background: -o-linear-gradient(45deg, #ff89e9 0%, @layout_bg_color 100%);
+        background: linear-gradient(45deg, #ff89e9 0%, @layout_bg_color 100%);
+    }
+    .inspirational.roxy figure figcaption:before {
+        border-color: @layout_border_color;
+    }
+    .inspirational.sadie figure figcaption:before {
+        background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, @layout_bg_color 75%);
+        background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, @layout_bg_color 75%);
+    }
+    .inspirational.sarah figure {
+        background: @layout_bg_color;
+    }
+
+    .inspirational.steve figure:hover p {
+        background-color: @content_bg_color;
+    }
+    .inspirational.steve figure h2 {
+        background-color: @title_bg_color;
+    }
+
+    .inspirational.zoe figure figcaption{
+        background-color: @title_bg_color;
+    }
+
+
+    .owl-buttons {
+        display: @display_arrow;
+    }
+    .owl-buttons .owl-prev {
+        .left_arrow_hori_pos(@left_arrow_hori_pos);
+        .arrow_vert_pos(@left_arrow_vert_pos, @left_arrow_vert_off);
+    }
+    .owl-buttons .owl-next {
+        .right_arrow_hori_pos(@right_arrow_hori_pos);
+        .arrow_vert_pos(@right_arrow_vert_pos, @right_arrow_vert_off);
+    }
+    .owl-buttons .owl-prev span:before,
+        .owl-buttons .owl-next span:before {
+        font-size: @gs_arrow_size;
+    }
+
+    .owl-pagination {
+        display: @display_navigation;
+        .nav_vert_pos(@nav_vert_pos, @nav_vert_off);
+        .nav_hori_pos(@nav_hori_pos, @nav_hori_off);
+        left: 0;
+    }
+    .owl-pagination .owl-page {
+        width: @navigation_size;
+        height: @navigation_size;
+    }
+    @media screen and (max-width: 980px) {
+        .inspirational.gspwp-content figure h2,
+        .inspirational.apollo figure p {
+            .font_size(@title_font_size, 0.80);
+        }
+    }
+    @media screen and (max-width: 720px) {
+        .inspirational.gspwp-content figure h2,
+        .inspirational.apollo figure p {
+            .font_size(@title_font_size, 0.70);
+        }
+    }
+    @media screen and (max-width: 640px) {
+        .inspirational.gspwp-content figure h2,
+        .inspirational.apollo figure p {
+            .font_size(@title_font_size, 0.60);
+        }
+    }
+}

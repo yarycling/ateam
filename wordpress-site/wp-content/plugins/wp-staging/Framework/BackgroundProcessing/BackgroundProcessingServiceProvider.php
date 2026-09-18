@@ -1,0 +1,337 @@
+<?php
+
+/**
+ * Manages the registration and hooking of the Background Processing support feature.
+ *
+ * @see dev/docs/background-processing/self-healing.md for the layered
+ *      queue recovery architecture.
+ *
+ * @package WPStaging\Framework\BackgroundProcessing
+ */
+
+namespace WPStaging\Framework\BackgroundProcessing;
+
+use WPStaging\Core\Cron\Cron;
+use WPStaging\Framework\Adapter\Database;
+use WPStaging\Framework\Adapter\Database\InterfaceDatabaseClient;
+use WPStaging\Framework\DI\FeatureServiceProvider;
+
+use function WPStaging\functions\debug_log;
+
+/**
+ * Class BackgroundProcessingServiceProvider
+ *
+ * @property  \tad_DI52_Container container
+ * @package WPStaging\Framework\BackgroundProcessing
+ */
+class BackgroundProcessingServiceProvider extends FeatureServiceProvider
+{
+    /** @var string */
+    const ACTION_QUEUE_MAINTAIN = 'wpstg_queue_maintain';
+
+    /** @var string */
+    const TRANSIENT_STALL_PROBE_LOCK = 'wpstg_queue_stall_probe_lock';
+
+    /** @var string */
+    const TRANSIENT_QUEUE_HAS_WORK = 'wpstg_queue_has_work';
+
+    /** @var int */
+    const QUEUE_HAS_WORK_TTL = DAY_IN_SECONDS;
+
+    /** @var int */
+    const STALL_PROBE_THROTTLE_SECONDS = 15;
+
+    /** @var int */
+    const STALL_IDLE_SECONDS = 20;
+
+    /** @var int Age in seconds after which a STATUS_PROCESSING row is considered abandoned. Must exceed the longest expected dispatch window. */
+    const STUCK_PROCESSING_SECONDS = 60;
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getFeatureTrigger()
+    {
+        return 'WPSTG_FEATURE_ENABLE_BACKGROUND_PROCESSING';
+    }
+
+    /**
+     * Registers the required Cron actions and the classes used by the feature provider.
+     *
+     * @return bool Whether the feature registration was actually done or not.
+     */
+    public function register()
+    {
+        // This allows us to disable or enable the feature by setting WPSTG_FEATURE_ENABLE_BACKGROUND_PROCESSING to false/true in wp-config.php
+        if (!static::isEnabledInProduction()) {
+            return false;
+        }
+
+        $database = $this->container->make(Database::class)->getClient();
+
+        // See if there is better way than this to handle this code?
+        $this->container->when(Queue::class)
+            ->needs(InterfaceDatabaseClient::class)
+            ->give($database);
+
+        // For caching purposes, have one single instance of the Queue around.
+        $this->container->singleton(Queue::class, Queue::class);
+        // For concurrency purposes, have one single instance of the Queue processor around.
+        $this->container->singleton(QueueProcessor::class, QueueProcessor::class);
+
+        /** @var Cron $cron */
+        $cron = $this->container->make(Cron::class);
+
+        $this->registerFeatureDetection($cron);
+        $this->scheduleQueueMaintenance($cron);
+        $this->setupQueueProcessingEntrypoints($cron);
+        $this->setupStallDetector();
+
+        return true;
+    }
+
+    /**
+     * Runs the Queue maintenance routines.
+     *
+     * @return void The method will not return any value.
+     */
+    public function runQueueMaintenance()
+    {
+        debug_log('Running Queue Maintenance.', 'info', false);
+
+        /** @var Queue $queue */
+        $queue = $this->container->make(Queue::class);
+
+        // Mark all dangling Actions as Failed.
+        $queue->markDanglingAs(Queue::STATUS_FAILED);
+        // Remove old Actions.
+        $queue->cleanup();
+    }
+
+    /**
+     * Schedules the Queue maintenance by means of the Cron. The Cron is not
+     * a really reliable method to execute timely tasks in WordPress, especially
+     * if not powered by a real cron, but it's fine for addressing the maintenance
+     * operations of the Queue that do not require to be timely and are fine happening
+     * when possible.
+     *
+     * @since TBD
+     *
+     * @param Cron $cron
+     * @return void
+     */
+    private function scheduleQueueMaintenance(Cron $cron)
+    {
+        // Once a day fire an action to run the Queue maintenance routines.
+        if (!wp_next_scheduled(self::ACTION_QUEUE_MAINTAIN)) {
+            wp_schedule_event($cron->getFirstRunTimestamp(Cron::DAILY), Cron::DAILY, self::ACTION_QUEUE_MAINTAIN);
+        }
+
+        // When the action fires, run the maintenance routines.
+        add_action(self::ACTION_QUEUE_MAINTAIN, [$this, 'runQueueMaintenance']); // phpcs:ignore WPStaging.Security.FirstArgNotAString
+    }
+
+    /**
+     * Sets up the Queue processing entry points.
+     *
+     * The Queue, when loaded with Actions, has the potential to soak resources.
+     * The Queue Processor will have safeguards in place to avoid this, but we should
+     * be careful about the entrypoints of the queue processing to make sure it will
+     * process Actions only when doing that will not compromise the user experience.
+     * This is why we rely on side-processes that we can trigger while the main PHP process
+     * that is handling the user interaction with the site stays fast and snappy.
+     *
+     * @param Cron $cron
+     * @return void The method does not return any value.
+     */
+    private function setupQueueProcessingEntrypoints(Cron $cron)
+    {
+        /**
+         * This is the core of how the Queue works: when the `wpstg_queue_process`, or the AJAX version of it, fires, we'll process some
+         * Actions.
+         * Setting up how we make these WordPress actions fire is what we take care of next.
+         */
+        $wpActions = [
+            QueueProcessor::ACTION_QUEUE_PROCESS,
+            'wp_ajax_nopriv_' . QueueProcessor::ACTION_QUEUE_PROCESS,
+            'wp_ajax_' . QueueProcessor::ACTION_QUEUE_PROCESS,
+        ];
+        $queueProcessorProcess = $this->container->callback(QueueProcessor::class, 'process');
+
+        foreach ($wpActions as $wpAction) {
+            if (!has_action($wpAction, $queueProcessorProcess)) {
+                add_action($wpAction, $queueProcessorProcess); // phpcs:ignore WPStaging.Security.FirstArgNotAString -- Queue action callbacks should not take input from request.
+            }
+        }
+
+        /*
+         * The first way we trigger the action that will make the Queue Processor process Actions is a Cron schedule.
+         * With full-knowledge of the fact that it will not be reliable, we still try to get some work done
+         * on Cron calls.
+         * Once every hour (kinda, it's Cron), fire the `wpstg_queue_process` action.
+         */
+        if (!wp_next_scheduled(QueueProcessor::ACTION_QUEUE_PROCESS)) {
+            wp_schedule_event($cron->getFirstRunTimestamp(Cron::HOURLY), Cron::HOURLY, QueueProcessor::ACTION_QUEUE_PROCESS);
+        }
+
+        /*
+         * This is currently deactivated while we decide if supporting this is something we would like to do at all.
+        if (is_admin() && !wp_doing_ajax()) {
+            $ajaxAvailable = $this->container->make(FeatureDetection::class)->isAjaxAvailable(false);
+
+            if (!$ajaxAvailable) {
+                // add_action('shutdown', $queueProcessorProcess, -10000);
+            }
+        }
+        */
+    }
+
+    /**
+     * Throttled init-time recovery for environments where the non-blocking loopback
+     * is silently dropped (WAF, hairpin DNS, proxy) and WP-Cron is unavailable.
+     */
+    private function setupStallDetector()
+    {
+        add_action('init', [$this, 'detectAndRecoverStall'], 100);
+    }
+
+    /**
+     * @return void
+     */
+    public function detectAndRecoverStall()
+    {
+        if (!get_site_transient(self::TRANSIENT_QUEUE_HAS_WORK)) {
+            return;
+        }
+
+        if (function_exists('wp_doing_cron') && wp_doing_cron()) {
+            return;
+        }
+
+        if (defined('DOING_AJAX') && DOING_AJAX) {
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+            $requestAction = isset($_REQUEST['action']) ? sanitize_text_field(wp_unslash($_REQUEST['action'])) : '';
+            if ($requestAction === QueueProcessor::ACTION_QUEUE_PROCESS || $requestAction === FeatureDetection::ACTION_AJAX_TEST) {
+                return;
+            }
+        }
+
+        if (get_site_transient(self::TRANSIENT_STALL_PROBE_LOCK)) {
+            return;
+        }
+
+        set_site_transient(self::TRANSIENT_STALL_PROBE_LOCK, 1, self::STALL_PROBE_THROTTLE_SECONDS);
+
+        try {
+            /** @var Queue $queue */
+            $queue = $this->container->make(Queue::class);
+        } catch (\Throwable $e) {
+            return;
+        }
+
+        $revived = 0;
+        try {
+            $breakpoint = $this->getStuckProcessingBreakpoint();
+            if ($breakpoint !== null) {
+                $revived = (int)$queue->markDanglingAs(Queue::STATUS_READY, $breakpoint, true);
+                if ($revived > 0) {
+                    debug_log('[Background Processing] Revived ' . $revived . ' stuck-in-processing action(s). Claim age threshold: ' . self::STUCK_PROCESSING_SECONDS . 's.', 'info', true);
+                }
+            }
+        } catch (\Throwable $e) {
+            // best-effort
+        }
+
+        if ((int)$queue->count(Queue::STATUS_READY) === 0) {
+            if ((int)$queue->count(Queue::STATUS_PROCESSING) === 0) {
+                delete_site_transient(self::TRANSIENT_QUEUE_HAS_WORK);
+            }
+
+            return;
+        }
+
+        if ($revived > 0) {
+            $this->recoverStalledQueue($queue, 0, $revived);
+            return;
+        }
+
+        $lastUpdate = $queue->getLastUpdatedAtTimestamp();
+        if ($lastUpdate === 0) {
+            // Legacy row predating insert-time updated_at stamping; treat as stalled.
+            $this->recoverStalledQueue($queue, 0, 0);
+            return;
+        }
+
+        $idleSeconds = time() - $lastUpdate;
+        if ($idleSeconds < self::STALL_IDLE_SECONDS) {
+            return;
+        }
+
+        $this->recoverStalledQueue($queue, $idleSeconds, 0);
+    }
+
+    /**
+     * @return void
+     */
+    private function recoverStalledQueue(Queue $queue, $idleSeconds, $revivedCount)
+    {
+        debug_log('[Background Processing] Stall detected: ready=' . $queue->count(Queue::STATUS_READY) . ' idle_seconds=' . (int)$idleSeconds . ' revived=' . (int)$revivedCount . '. Recovering via inline process().', 'info', true);
+
+        try {
+            /** @var QueueProcessor $processor */
+            $processor = $this->container->make(QueueProcessor::class);
+        } catch (\Throwable $e) {
+            return;
+        }
+
+        $processor->process();
+    }
+
+    /**
+     * @return \DateTimeImmutable|null Null when caller should skip the revive pass this cycle.
+     */
+    private function getStuckProcessingBreakpoint()
+    {
+        try {
+            $breakpoint = new \DateTimeImmutable(current_time('mysql'));
+            return $breakpoint->setTimestamp($breakpoint->getTimestamp() - self::STUCK_PROCESSING_SECONDS);
+        } catch (\Exception $e) {
+            return null;
+        }
+    }
+
+    /**
+     * Registers the two actions that will be called by the AJAX support
+     * feature detection.
+     *
+     * @since TBD
+     * @param Cron $cron
+     * @return void
+     */
+    private function registerFeatureDetection(Cron $cron)
+    {
+        // Register the method that will handle the AJAX check.
+        $updateOption = $this->container->callback(FeatureDetection::class, 'updateAjaxTestOption');
+        // Hook on authenticated AJAX endpoint to handle the check.
+        add_action('wp_ajax_' . FeatureDetection::ACTION_AJAX_TEST, $updateOption); // phpcs:ignore WPStaging.Security.AuthorizationChecked -- Public
+        add_action('wp_ajax_nopriv_' . FeatureDetection::ACTION_AJAX_TEST, $updateOption); // phpcs:ignore WPStaging.Security.AuthorizationChecked -- Public
+
+        // Once a week re-run the check.
+        if (!wp_next_scheduled(FeatureDetection::ACTION_AJAX_SUPPORT_FEATURE_DETECTION)) {
+            wp_schedule_event($cron->getFirstRunTimestamp(Cron::WEEKLY), Cron::WEEKLY, FeatureDetection::ACTION_AJAX_SUPPORT_FEATURE_DETECTION);
+        }
+
+        $runAjaxFeatureTest = $this->container->callback(FeatureDetection::class, 'runAjaxFeatureTest');
+        add_action(FeatureDetection::ACTION_AJAX_SUPPORT_FEATURE_DETECTION, $runAjaxFeatureTest);
+
+        // Run the test again if requested by link, e.g. from the notice.
+        if (
+            is_admin()
+            && filter_input(INPUT_GET, FeatureDetection::AJAX_REQUEST_QUERY_VAR, FILTER_SANITIZE_NUMBER_INT)
+        ) {
+            $runAjaxFeatureTest();
+            wp_redirect(remove_query_arg(FeatureDetection::AJAX_REQUEST_QUERY_VAR));
+            die();
+        }
+    }
+}

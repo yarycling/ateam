@@ -1,0 +1,44 @@
+#mainform {
+    display: none;
+}
+
+.required-fail {
+    border: 1px solid rgb(255, 0, 0) !important;
+}
+
+.required-success {
+    border: 1px solid rgb(50, 205, 50) !important;
+}
+
+.message {
+    align-items: center !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    margin-bottom: 0px !important;
+}
+
+.fail {
+    color: rgb(255, 0, 0) !important;
+
+}
+
+.success {
+    color: rgb(50, 205, 50) !important;
+}
+
+.inline-space {
+    margin-right: 5px !important;
+}
+
+.disabled {
+    pointer-events: none !important;
+    opacity: 0.4 !important;
+}
+
+.warning-text {
+    color: rgb(255, 140, 0) !important;
+}
+
+.clear-text {
+    color: rgb(227, 52, 47) !important;
+}

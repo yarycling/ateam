@@ -1,0 +1,262 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Struninn Twitch - Schedule\n"
+"POT-Creation-Date: 2024-06-25 10:33-0300\n"
+"PO-Revision-Date: 2022-03-29 12:33-0300\n"
+"Last-Translator: \n"
+"Language-Team: Odin Design Themes\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: esc_html__;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: css\n"
+"X-Poedit-SearchPathExcluded-1: js\n"
+"X-Poedit-SearchPathExcluded-2: languages\n"
+"X-Poedit-SearchPathExcluded-3: node_modules\n"
+"X-Poedit-SearchPathExcluded-4: sass\n"
+
+#: includes/customizer/struninnuicards-customizer-color-utils.php:29
+#: includes/customizer/struninnuicards-customizer-color-utils.php:70
+msgctxt "(Customizer) Color Option - Label"
+msgid "Box Background"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-color-utils.php:34
+#: includes/customizer/struninnuicards-customizer-color-utils.php:75
+msgctxt "(Customizer) Color Option - Label"
+msgid "Darker Box Background"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-color-utils.php:43
+#: includes/customizer/struninnuicards-customizer-color-utils.php:84
+msgctxt "(Customizer) Color Option - Label"
+msgid "Line"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-color-utils.php:52
+#: includes/customizer/struninnuicards-customizer-color-utils.php:93
+msgctxt "(Customizer) Color Option - Label"
+msgid "Text"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-color-utils.php:60
+#: includes/customizer/struninnuicards-customizer-color-utils.php:101
+msgctxt "(Customizer) Color Option - Label"
+msgid "Text Over Image"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-color.php:25
+msgctxt "(Customizer) Color Options - Panel - Title"
+msgid "Colors - Light Theme"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-color.php:26
+msgctxt "(Customizer) Color Options - Panel - Title"
+msgid "Colors - Dark Theme"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-color.php:39
+msgctxt "(Customizer) Color Options - Panel - Description"
+msgid "From here, you can change plugin colors."
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-font.php:26
+msgctxt "(Customizer) Font Options - Panel - Title"
+msgid "Font"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-font.php:27
+msgctxt "(Customizer) Font Options - Panel - Description"
+msgid "From here, you can change font options."
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-font.php:43
+msgctxt "(Customizer) Font Options - Use Plugin Font - Title"
+msgid "Use plugin font"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-font.php:44
+msgctxt "(Customizer) Font Options - Use Plugin Font - Description"
+msgid "Uncheck this option if you don't want to use the plugin font."
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-font.php:60
+msgctxt "(Customizer) Font Options - Scale - Title"
+msgid "Font - Scale"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-font.php:61
+msgctxt "(Customizer) Font Options - Scale - Description"
+msgid "Allows to increase (> 1) or decrease (< 1) proportional font size of all text elements. Some elements positions may be affected when using high or low values, so further style adjustments may be needed."
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-panel.php:24
+msgctxt "(Customizer) Struninn UI Cards - Sports Player - Panel - Title"
+msgid "Struninn UI Cards - Sports Player"
+msgstr ""
+
+#: includes/customizer/struninnuicards-customizer-panel.php:25
+msgctxt "(Customizer) Struninn UI Cards - Sports Player - Panel - Description"
+msgid "From here, you can customize plugin options."
+msgstr ""
+
+#: includes/functions/elementor/struninnuicards-functions-elementor.php:47
+msgid "Struninn UI Cards"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:31
+msgid "Struninn UI Card - Sports Player V1"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:50
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:50
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:50
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:50
+msgid "Content"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:60
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:60
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:60
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:60
+msgid "Theme"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:64
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:64
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:64
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:64
+msgid "Light"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:65
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:65
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:65
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:65
+msgid "Dark"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:73
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:73
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:73
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:73
+msgid "Width"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:74
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:74
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:74
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:74
+msgid "Use a value of 0 to let the card auto adjust size."
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:85
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:85
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:85
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:85
+msgid "Image"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:96
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:96
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:96
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:96
+msgid "Badge"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:107
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:107
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:107
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:117
+msgid "Title"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:117
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:117
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:117
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:127
+msgid "Title Link"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:129
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:129
+msgid "Text"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:139
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:139
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:129
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:139
+msgid "Number"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:149
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:149
+msgid "Footer Left Title"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:159
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:159
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:149
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:169
+msgid "Facebook URL"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:171
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:171
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:161
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:181
+msgid "X URL"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:183
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:183
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:173
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:193
+msgid "Instagram URL"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:197
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:197
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:187
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:207
+msgid "Colors"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V1.php:205
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:205
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:195
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:215
+msgid "Primary Color"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:31
+msgid "Struninn UI Card - Sports Player V2"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V2.php:149
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:139
+msgid "Tag"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V3.php:31
+msgid "Struninn UI Card - Sports Player V3"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:31
+msgid "Struninn UI Card - Sports Player V4"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:107
+msgid "Pretitle"
+msgstr ""
+
+#: includes/functions/elementor/widgets/sportsplayer-card/StruninnUICards_Elementor_Widget_SportsPlayer_Card_V4.php:159
+msgid "Footer Right Title"
+msgstr ""

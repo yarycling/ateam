@@ -1,0 +1,48 @@
+.disabled {
+    opacity: 0.4 !important;
+    pointer-events: none !important;
+}
+
+/* Transaction ID column */
+th.manage-column.column-order_transaction_id {
+    text-align: center !important;
+}
+
+td.order_transaction_id {
+    text-align: center !important;
+}
+
+
+/* Transaction Details column */
+th.manage-column.column-order_transaction_details {
+    text-align: center !important;
+}
+
+td.order_transaction_details {
+    text-align: center !important;
+}
+
+
+/* Total (no Fee) column */
+th.manage-column.column-order_total_nofee {
+    text-align: right !important;
+}
+
+td.order_total_nofee {
+    text-align: right !important;
+}
+
+
+/* Pulse animation after Manual Verify */
+tr[id^="post-"] {
+    box-shadow: none;
+    transition: all 0.5s ease;
+}
+
+.verify-failed {
+    box-shadow: inset 0 0 0 1000px rgba(255, 0, 0, 0.2) !important;
+}
+
+.verify-success {
+    box-shadow: inset 0 0 0 1000px rgba(0, 255, 0, 0.2) !important;
+}

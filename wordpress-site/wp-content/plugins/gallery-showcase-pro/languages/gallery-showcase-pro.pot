@@ -1,0 +1,940 @@
+# Copyright (C) 2018
+# This file is distributed under the same license as the  package.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Gallery Showcase\n"
+"Report-Msgid-Bugs-To: https://oceanwp.org/support/\n"
+"POT-Creation-Date: 2023-09-21 15:45+0530\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: OceanWP\n"
+"Language-Team: Alkesh Miyani <miyanialkesh7@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _esc_attr__;esc_attr_x;esc_attr_e;esc_html__;"
+"esc_html_e;esc_html_x;__;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: gallery-showcase-pro.php:127 gallery-showcase-pro.php:128
+msgid "Showcase Updated."
+msgstr ""
+
+#: gallery-showcase-pro.php:129
+msgid "Showcase Added."
+msgstr ""
+
+#: gallery-showcase-pro.php:130
+msgid "Showcase Saved."
+msgstr ""
+
+#: gallery-showcase-pro.php:131
+msgid "Showcase Submitted."
+msgstr ""
+
+#: gallery-showcase-pro.php:132
+msgid "Showcase Draft Updated."
+msgstr ""
+
+#: gallery-showcase-pro.php:207
+msgid "Select Images for Gallery"
+msgstr ""
+
+#: gallery-showcase-pro.php:208
+msgid "Require atleast one field"
+msgstr ""
+
+#: gallery-showcase-pro.php:209
+msgid "Are you sure you want to remove image?"
+msgstr ""
+
+#: gallery-showcase-pro.php:210
+msgid "Remove Image"
+msgstr ""
+
+#: gallery-showcase-pro.php:211
+msgid "Upload Image"
+msgstr ""
+
+#: gallery-showcase-pro.php:212
+msgid "Pagination Type"
+msgstr ""
+
+#: gallery-showcase-pro.php:213
+msgid "Set Pgination Type"
+msgstr ""
+
+#: gallery-showcase-pro.php:214
+msgid "Select Arrow Style"
+msgstr ""
+
+#: gallery-showcase-pro.php:215
+msgid "Select Navigation Style"
+msgstr ""
+
+#: gallery-showcase-pro.php:216
+msgid "Close"
+msgstr ""
+
+#: gallery-showcase-pro.php:278
+msgid "Layout Shortcode"
+msgstr ""
+
+#: gallery-showcase-pro.php:362 includes/add_metaboxes.php:61
+msgid "Title"
+msgstr ""
+
+#: gallery-showcase-pro.php:366 includes/add_metaboxes.php:65
+msgid "Description"
+msgstr ""
+
+#: gallery-showcase-pro.php:389 includes/register_posttypes.php:10
+#: includes/register_posttypes.php:11 includes/register_posttypes.php:12
+#: includes/register_posttypes.php:13
+msgid "Gallery Showcase"
+msgstr ""
+
+#: gallery-showcase-pro.php:414
+msgid "Insert Gallery Showcase Shortcode"
+msgstr ""
+
+#: gallery-showcase-pro.php:416
+msgid "Choose shortcode"
+msgstr ""
+
+#: gallery-showcase-pro.php:424
+msgid "Insert Shortcode"
+msgstr ""
+
+#: gallery-showcase-pro.php:426
+msgid "No shortcodes found"
+msgstr ""
+
+#: includes/add_metaboxes.php:9
+msgid "Gallery Options"
+msgstr ""
+
+#: includes/add_metaboxes.php:21
+msgid "Select Images"
+msgstr ""
+
+#: includes/add_metaboxes.php:24
+msgid "Edit"
+msgstr ""
+
+#: includes/add_metaboxes.php:78
+msgid "Remove All"
+msgstr ""
+
+#: includes/add_metaboxes.php:93
+msgid "Layout Options"
+msgstr ""
+
+#: includes/add_metaboxes.php:113
+msgid "General"
+msgstr ""
+
+#: includes/add_metaboxes.php:116
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/add_metaboxes.php:119
+msgid "Slider Setting"
+msgstr ""
+
+#: includes/add_metaboxes.php:122
+msgid "Title Setting"
+msgstr ""
+
+#: includes/add_metaboxes.php:125
+msgid "Content Setting"
+msgstr ""
+
+#: includes/add_metaboxes.php:128
+msgid "Filter Design"
+msgstr ""
+
+#: includes/add_metaboxes.php:136
+msgid "Enable Dynamic Posts?"
+msgstr ""
+
+#: includes/add_metaboxes.php:140 includes/add_metaboxes.php:190
+#: includes/add_metaboxes.php:443 includes/add_metaboxes.php:546
+#: includes/add_metaboxes.php:624 includes/add_metaboxes.php:721
+msgid "Yes"
+msgstr ""
+
+#: includes/add_metaboxes.php:142 includes/add_metaboxes.php:192
+#: includes/add_metaboxes.php:445 includes/add_metaboxes.php:548
+#: includes/add_metaboxes.php:626 includes/add_metaboxes.php:723
+msgid "No"
+msgstr ""
+
+#: includes/add_metaboxes.php:149 includes/add_metaboxes.php:150
+msgid "Custom Post Type"
+msgstr ""
+
+#: includes/add_metaboxes.php:175
+msgid "Set Post Image Limit"
+msgstr ""
+
+#: includes/add_metaboxes.php:177
+msgid "If you set -1 / 0 it will take all Images."
+msgstr ""
+
+#: includes/add_metaboxes.php:180
+msgid "-1"
+msgstr ""
+
+#: includes/add_metaboxes.php:186
+msgid "Want Categories Filter"
+msgstr ""
+
+#: includes/add_metaboxes.php:199
+msgid "Select Filter Category"
+msgstr ""
+
+#: includes/add_metaboxes.php:200
+msgid "No Category Found"
+msgstr ""
+
+#: includes/add_metaboxes.php:217 includes/add_metaboxes.php:218
+msgid "Layout Type"
+msgstr ""
+
+#: includes/add_metaboxes.php:219
+msgid "Grid"
+msgstr ""
+
+#: includes/add_metaboxes.php:220
+msgid "Masonry"
+msgstr ""
+
+#: includes/add_metaboxes.php:221
+msgid "Slider"
+msgstr ""
+
+#: includes/add_metaboxes.php:228
+msgid "Column for Desktop"
+msgstr ""
+
+#: includes/add_metaboxes.php:230 includes/add_metaboxes.php:242
+#: includes/add_metaboxes.php:254 includes/add_metaboxes.php:266
+msgid "1 Column"
+msgstr ""
+
+#: includes/add_metaboxes.php:231 includes/add_metaboxes.php:243
+#: includes/add_metaboxes.php:255 includes/add_metaboxes.php:267
+msgid "2 Columns"
+msgstr ""
+
+#: includes/add_metaboxes.php:232 includes/add_metaboxes.php:244
+#: includes/add_metaboxes.php:256 includes/add_metaboxes.php:268
+msgid "3 Columns"
+msgstr ""
+
+#: includes/add_metaboxes.php:233 includes/add_metaboxes.php:245
+#: includes/add_metaboxes.php:257 includes/add_metaboxes.php:269
+msgid "4 Columns"
+msgstr ""
+
+#: includes/add_metaboxes.php:234 includes/add_metaboxes.php:246
+#: includes/add_metaboxes.php:258 includes/add_metaboxes.php:270
+msgid "5 Columns"
+msgstr ""
+
+#: includes/add_metaboxes.php:235 includes/add_metaboxes.php:247
+#: includes/add_metaboxes.php:259 includes/add_metaboxes.php:271
+msgid "6 Columns"
+msgstr ""
+
+#: includes/add_metaboxes.php:240
+msgid "Column for Small Desktop"
+msgstr ""
+
+#: includes/add_metaboxes.php:252
+msgid "Column for Tablet"
+msgstr ""
+
+#: includes/add_metaboxes.php:264
+msgid "Column for Mobile"
+msgstr ""
+
+#: includes/add_metaboxes.php:278 includes/add_metaboxes.php:861
+msgid "Padding"
+msgstr ""
+
+#: includes/add_metaboxes.php:279 includes/add_metaboxes.php:486
+#: includes/add_metaboxes.php:521 includes/add_metaboxes.php:596
+#: includes/add_metaboxes.php:862
+msgid "Top"
+msgstr ""
+
+#: includes/add_metaboxes.php:280 includes/add_metaboxes.php:478
+#: includes/add_metaboxes.php:513 includes/add_metaboxes.php:588
+#: includes/add_metaboxes.php:863
+msgid "Right"
+msgstr ""
+
+#: includes/add_metaboxes.php:281 includes/add_metaboxes.php:490
+#: includes/add_metaboxes.php:525 includes/add_metaboxes.php:600
+#: includes/add_metaboxes.php:864
+msgid "Bottom"
+msgstr ""
+
+#: includes/add_metaboxes.php:282 includes/add_metaboxes.php:474
+#: includes/add_metaboxes.php:509 includes/add_metaboxes.php:584
+#: includes/add_metaboxes.php:865
+msgid "Left"
+msgstr ""
+
+#: includes/add_metaboxes.php:288
+msgid "Custom CSS"
+msgstr ""
+
+#: includes/add_metaboxes.php:289
+msgid "Write your Custom CSS here"
+msgstr ""
+
+#: includes/add_metaboxes.php:298
+msgid "Select Image Size"
+msgstr ""
+
+#: includes/add_metaboxes.php:300
+msgid "Original Resolution"
+msgstr ""
+
+#: includes/add_metaboxes.php:309
+msgid "Custom Size"
+msgstr ""
+
+#: includes/add_metaboxes.php:316
+msgid "Add Image Size"
+msgstr ""
+
+#: includes/add_metaboxes.php:317
+msgid "Width"
+msgstr ""
+
+#: includes/add_metaboxes.php:318
+msgid "Height"
+msgstr ""
+
+#: includes/add_metaboxes.php:324
+msgid "Image Hard Corp"
+msgstr ""
+
+#: includes/add_metaboxes.php:331
+msgid "Layout Effects"
+msgstr ""
+
+#: includes/add_metaboxes.php:333
+msgid "Inspirational"
+msgstr ""
+
+#: includes/add_metaboxes.php:334
+msgid "Apollo"
+msgstr ""
+
+#: includes/add_metaboxes.php:335
+msgid "Bubba"
+msgstr ""
+
+#: includes/add_metaboxes.php:336
+msgid "Chico"
+msgstr ""
+
+#: includes/add_metaboxes.php:337
+msgid "Dexter"
+msgstr ""
+
+#: includes/add_metaboxes.php:338
+msgid "Duke"
+msgstr ""
+
+#: includes/add_metaboxes.php:339
+msgid "Jazz"
+msgstr ""
+
+#: includes/add_metaboxes.php:340
+msgid "Julia"
+msgstr ""
+
+#: includes/add_metaboxes.php:341
+msgid "Goliath"
+msgstr ""
+
+#: includes/add_metaboxes.php:342
+msgid "Layla"
+msgstr ""
+
+#: includes/add_metaboxes.php:343
+msgid "Lily"
+msgstr ""
+
+#: includes/add_metaboxes.php:344
+msgid "Marley"
+msgstr ""
+
+#: includes/add_metaboxes.php:345
+msgid "Milo"
+msgstr ""
+
+#: includes/add_metaboxes.php:346
+msgid "Ming"
+msgstr ""
+
+#: includes/add_metaboxes.php:347
+msgid "Moses"
+msgstr ""
+
+#: includes/add_metaboxes.php:348
+msgid "Oscar"
+msgstr ""
+
+#: includes/add_metaboxes.php:349
+msgid "Ruby"
+msgstr ""
+
+#: includes/add_metaboxes.php:350
+msgid "Romeo"
+msgstr ""
+
+#: includes/add_metaboxes.php:351
+msgid "Roxy"
+msgstr ""
+
+#: includes/add_metaboxes.php:352
+msgid "Sadie"
+msgstr ""
+
+#: includes/add_metaboxes.php:353
+msgid "Sarah"
+msgstr ""
+
+#: includes/add_metaboxes.php:354
+msgid "Selena"
+msgstr ""
+
+#: includes/add_metaboxes.php:355
+msgid "Steve"
+msgstr ""
+
+#: includes/add_metaboxes.php:356
+msgid "Zoe"
+msgstr ""
+
+#: includes/add_metaboxes.php:365
+msgid "Animation"
+msgstr ""
+
+#: includes/add_metaboxes.php:367 includes/add_metaboxes.php:687
+#: includes/add_metaboxes.php:697 includes/add_metaboxes.php:784
+#: includes/add_metaboxes.php:794 includes/add_metaboxes.php:894
+#: includes/add_metaboxes.php:904
+msgid "None"
+msgstr ""
+
+#: includes/add_metaboxes.php:368
+msgid "Bounce"
+msgstr ""
+
+#: includes/add_metaboxes.php:369
+msgid "Bounce In"
+msgstr ""
+
+#: includes/add_metaboxes.php:370
+msgid "Bounce In Down"
+msgstr ""
+
+#: includes/add_metaboxes.php:371
+msgid "Bounce In Left"
+msgstr ""
+
+#: includes/add_metaboxes.php:372
+msgid "Bounce In Right"
+msgstr ""
+
+#: includes/add_metaboxes.php:373
+msgid "Bounce In Up"
+msgstr ""
+
+#: includes/add_metaboxes.php:374
+msgid "Jack In The Box"
+msgstr ""
+
+#: includes/add_metaboxes.php:375
+msgid "Jello"
+msgstr ""
+
+#: includes/add_metaboxes.php:376
+msgid "Flash"
+msgstr ""
+
+#: includes/add_metaboxes.php:377
+msgid "Fade In"
+msgstr ""
+
+#: includes/add_metaboxes.php:378
+msgid "Fade In Down"
+msgstr ""
+
+#: includes/add_metaboxes.php:379
+msgid "Fade In Down Big"
+msgstr ""
+
+#: includes/add_metaboxes.php:380
+msgid "Fade In Left"
+msgstr ""
+
+#: includes/add_metaboxes.php:381
+msgid "Fade In Left Big"
+msgstr ""
+
+#: includes/add_metaboxes.php:382
+msgid "Fade In Right"
+msgstr ""
+
+#: includes/add_metaboxes.php:383
+msgid "Fade In Right Big"
+msgstr ""
+
+#: includes/add_metaboxes.php:384
+msgid "Fade In Up"
+msgstr ""
+
+#: includes/add_metaboxes.php:385
+msgid "Fade In Up Big"
+msgstr ""
+
+#: includes/add_metaboxes.php:386
+msgid "Flip In X"
+msgstr ""
+
+#: includes/add_metaboxes.php:387
+msgid "Flip In Y"
+msgstr ""
+
+#: includes/add_metaboxes.php:388
+msgid "Light Speed In"
+msgstr ""
+
+#: includes/add_metaboxes.php:389
+msgid "Pulse"
+msgstr ""
+
+#: includes/add_metaboxes.php:390
+msgid "Roll In"
+msgstr ""
+
+#: includes/add_metaboxes.php:391
+msgid "Rotate In"
+msgstr ""
+
+#: includes/add_metaboxes.php:392
+msgid "Rotate In Down Left"
+msgstr ""
+
+#: includes/add_metaboxes.php:393
+msgid "Rotate In Down Right"
+msgstr ""
+
+#: includes/add_metaboxes.php:394
+msgid "Rotate In Up Left"
+msgstr ""
+
+#: includes/add_metaboxes.php:395
+msgid "Rotate In Up Right"
+msgstr ""
+
+#: includes/add_metaboxes.php:396
+msgid "Rubber Band"
+msgstr ""
+
+#: includes/add_metaboxes.php:397
+msgid "Shake"
+msgstr ""
+
+#: includes/add_metaboxes.php:398
+msgid "Head Shake"
+msgstr ""
+
+#: includes/add_metaboxes.php:399
+msgid "Slide In Down"
+msgstr ""
+
+#: includes/add_metaboxes.php:400
+msgid "Slide In Left"
+msgstr ""
+
+#: includes/add_metaboxes.php:401
+msgid "Slide In Right"
+msgstr ""
+
+#: includes/add_metaboxes.php:402
+msgid "Slide In Up"
+msgstr ""
+
+#: includes/add_metaboxes.php:403
+msgid "Swing"
+msgstr ""
+
+#: includes/add_metaboxes.php:404
+msgid "Tada"
+msgstr ""
+
+#: includes/add_metaboxes.php:405
+msgid "Wobble"
+msgstr ""
+
+#: includes/add_metaboxes.php:406
+msgid "Zoom In"
+msgstr ""
+
+#: includes/add_metaboxes.php:407
+msgid "Zoom In Down"
+msgstr ""
+
+#: includes/add_metaboxes.php:408
+msgid "Zoom In Left"
+msgstr ""
+
+#: includes/add_metaboxes.php:409
+msgid "Zoom In Right"
+msgstr ""
+
+#: includes/add_metaboxes.php:410
+msgid "Zoom In Up"
+msgstr ""
+
+#: includes/add_metaboxes.php:417 includes/add_metaboxes.php:657
+#: includes/add_metaboxes.php:754 includes/add_metaboxes.php:843
+msgid "Background Color"
+msgstr ""
+
+#: includes/add_metaboxes.php:418 includes/add_metaboxes.php:424
+#: includes/add_metaboxes.php:651 includes/add_metaboxes.php:658
+#: includes/add_metaboxes.php:748 includes/add_metaboxes.php:755
+#: includes/add_metaboxes.php:833 includes/add_metaboxes.php:837
+#: includes/add_metaboxes.php:844 includes/add_metaboxes.php:848
+msgid "Color"
+msgstr ""
+
+#: includes/add_metaboxes.php:423
+msgid "Border Color"
+msgstr ""
+
+#: includes/add_metaboxes.php:432
+msgid "Arrow"
+msgstr ""
+
+#: includes/add_metaboxes.php:433
+msgid "Navigation"
+msgstr ""
+
+#: includes/add_metaboxes.php:439
+msgid "Display Arrow"
+msgstr ""
+
+#: includes/add_metaboxes.php:451
+msgid "Arrows Style"
+msgstr ""
+
+#: includes/add_metaboxes.php:452
+msgid "Chose Arrow Style"
+msgstr ""
+
+#: includes/add_metaboxes.php:463 includes/add_metaboxes.php:464
+msgid "Arrow Size"
+msgstr ""
+
+#: includes/add_metaboxes.php:468
+msgid "Left Arrow"
+msgstr ""
+
+#: includes/add_metaboxes.php:470 includes/add_metaboxes.php:505
+#: includes/add_metaboxes.php:580
+msgid "Horizontal Position"
+msgstr ""
+
+#: includes/add_metaboxes.php:476 includes/add_metaboxes.php:488
+#: includes/add_metaboxes.php:511 includes/add_metaboxes.php:523
+#: includes/add_metaboxes.php:586 includes/add_metaboxes.php:598
+msgid "Center"
+msgstr ""
+
+#: includes/add_metaboxes.php:482 includes/add_metaboxes.php:517
+#: includes/add_metaboxes.php:592
+msgid "Vertical Position"
+msgstr ""
+
+#: includes/add_metaboxes.php:494 includes/add_metaboxes.php:495
+#: includes/add_metaboxes.php:529 includes/add_metaboxes.php:530
+#: includes/add_metaboxes.php:606 includes/add_metaboxes.php:607
+msgid "Horizontal Offset"
+msgstr ""
+
+#: includes/add_metaboxes.php:498 includes/add_metaboxes.php:499
+#: includes/add_metaboxes.php:533 includes/add_metaboxes.php:534
+#: includes/add_metaboxes.php:610 includes/add_metaboxes.php:611
+msgid "Vertical Offset"
+msgstr ""
+
+#: includes/add_metaboxes.php:503
+msgid "Right Arrow"
+msgstr ""
+
+#: includes/add_metaboxes.php:542
+msgid "Display Navigation"
+msgstr ""
+
+#: includes/add_metaboxes.php:555
+msgid "Navigation Style"
+msgstr ""
+
+#: includes/add_metaboxes.php:556
+msgid "Chose Navigation Style"
+msgstr ""
+
+#: includes/add_metaboxes.php:574 includes/add_metaboxes.php:575
+msgid "Navigation Size"
+msgstr ""
+
+#: includes/add_metaboxes.php:620
+msgid "Display Title"
+msgstr ""
+
+#: includes/add_metaboxes.php:633 includes/add_metaboxes.php:730
+#: includes/add_metaboxes.php:815
+msgid "Font Family"
+msgstr ""
+
+#: includes/add_metaboxes.php:635 includes/add_metaboxes.php:732
+#: includes/add_metaboxes.php:817
+msgid "Default"
+msgstr ""
+
+#: includes/add_metaboxes.php:643 includes/add_metaboxes.php:644
+#: includes/add_metaboxes.php:740 includes/add_metaboxes.php:741
+#: includes/add_metaboxes.php:825 includes/add_metaboxes.php:826
+msgid "Font Size"
+msgstr ""
+
+#: includes/add_metaboxes.php:650 includes/add_metaboxes.php:747
+#: includes/add_metaboxes.php:832
+msgid "Font Color"
+msgstr ""
+
+#: includes/add_metaboxes.php:664 includes/add_metaboxes.php:761
+#: includes/add_metaboxes.php:871
+msgid "Italic Style"
+msgstr ""
+
+#: includes/add_metaboxes.php:669 includes/add_metaboxes.php:766
+#: includes/add_metaboxes.php:876
+msgid "Font Weight"
+msgstr ""
+
+#: includes/add_metaboxes.php:680 includes/add_metaboxes.php:777
+#: includes/add_metaboxes.php:887
+msgid "Bold"
+msgstr ""
+
+#: includes/add_metaboxes.php:681 includes/add_metaboxes.php:778
+#: includes/add_metaboxes.php:888
+msgid "Normal"
+msgstr ""
+
+#: includes/add_metaboxes.php:685 includes/add_metaboxes.php:782
+#: includes/add_metaboxes.php:892
+msgid "Text Transform"
+msgstr ""
+
+#: includes/add_metaboxes.php:688 includes/add_metaboxes.php:785
+#: includes/add_metaboxes.php:895
+msgid "Capitalize"
+msgstr ""
+
+#: includes/add_metaboxes.php:689 includes/add_metaboxes.php:786
+#: includes/add_metaboxes.php:896
+msgid "Uppercase"
+msgstr ""
+
+#: includes/add_metaboxes.php:690 includes/add_metaboxes.php:787
+#: includes/add_metaboxes.php:897
+msgid "Lowercase"
+msgstr ""
+
+#: includes/add_metaboxes.php:691 includes/add_metaboxes.php:788
+#: includes/add_metaboxes.php:898
+msgid "Full Width"
+msgstr ""
+
+#: includes/add_metaboxes.php:695 includes/add_metaboxes.php:792
+#: includes/add_metaboxes.php:902
+msgid "Text Decoration"
+msgstr ""
+
+#: includes/add_metaboxes.php:698 includes/add_metaboxes.php:795
+#: includes/add_metaboxes.php:905
+msgid "Underline"
+msgstr ""
+
+#: includes/add_metaboxes.php:699 includes/add_metaboxes.php:796
+#: includes/add_metaboxes.php:906
+msgid "Overline"
+msgstr ""
+
+#: includes/add_metaboxes.php:700 includes/add_metaboxes.php:797
+#: includes/add_metaboxes.php:907
+msgid "Line Through"
+msgstr ""
+
+#: includes/add_metaboxes.php:704 includes/add_metaboxes.php:705
+#: includes/add_metaboxes.php:801 includes/add_metaboxes.php:802
+#: includes/add_metaboxes.php:855 includes/add_metaboxes.php:911
+#: includes/add_metaboxes.php:912
+msgid "Line Height"
+msgstr ""
+
+#: includes/add_metaboxes.php:708 includes/add_metaboxes.php:709
+#: includes/add_metaboxes.php:805 includes/add_metaboxes.php:806
+#: includes/add_metaboxes.php:915 includes/add_metaboxes.php:916
+msgid "Letter Spacing"
+msgstr ""
+
+#: includes/add_metaboxes.php:717
+msgid "Display Content"
+msgstr ""
+
+#: includes/add_metaboxes.php:836
+msgid "Hover Font Color"
+msgstr ""
+
+#: includes/add_metaboxes.php:847
+msgid "Hover Background Color"
+msgstr ""
+
+#: includes/add_metaboxes.php:854
+msgid "Filter Tab Gap"
+msgstr ""
+
+#: includes/add_metaboxes.php:924
+msgid "Select Arrows"
+msgstr ""
+
+#: includes/add_metaboxes.php:939
+msgid "Select Navigation"
+msgstr ""
+
+#: includes/admin_menu_funcitons.php:17 includes/admin_menu_function.php:17
+msgid "Publish"
+msgstr ""
+
+#: includes/admin_menu_funcitons.php:44 includes/admin_menu_function.php:44
+msgid "Delete Permanently"
+msgstr ""
+
+#: includes/admin_menu_funcitons.php:46 includes/admin_menu_function.php:46
+msgid "Move to Trash"
+msgstr ""
+
+#: includes/admin_menu_funcitons.php:56 includes/admin_menu_function.php:56
+msgid "Add Tab"
+msgstr ""
+
+#: includes/admin_menu_funcitons.php:57 includes/admin_menu_function.php:57
+msgid "Add"
+msgstr ""
+
+#: includes/admin_menu_funcitons.php:61 includes/admin_menu_funcitons.php:62
+#: includes/admin_menu_function.php:61 includes/admin_menu_function.php:62
+msgid "Update"
+msgstr ""
+
+#: includes/admin_notices.php:10
+msgid ""
+"You must select Featured Image. Your Post is saved but it can not be "
+"published."
+msgstr ""
+
+#: includes/functions.php:182
+msgid ""
+"GD Library Error: imagecreatetruecolor does not exist - please contact your "
+"webhost and ask them to install the GD library"
+msgstr ""
+
+#: includes/register_posttypes.php:14
+msgid "Add New"
+msgstr ""
+
+#: includes/register_posttypes.php:15
+msgid "Add New Showcase"
+msgstr ""
+
+#: includes/register_posttypes.php:16
+msgid "New Showcase"
+msgstr ""
+
+#: includes/register_posttypes.php:17
+msgid "Edit Showcase"
+msgstr ""
+
+#: includes/register_posttypes.php:18
+msgid "View Showcases"
+msgstr ""
+
+#: includes/register_posttypes.php:19
+msgid "All Showcases"
+msgstr ""
+
+#: includes/register_posttypes.php:20
+msgid "Search Showcase"
+msgstr ""
+
+#: includes/register_posttypes.php:21
+msgid "Parent Showcase"
+msgstr ""
+
+#: includes/register_posttypes.php:22
+msgid "No Gallery Showcase found"
+msgstr ""
+
+#: includes/register_posttypes.php:23
+msgid "No Gallery Showcase found in Trash"
+msgstr ""
+
+#: includes/shortcode.php:30 includes/shortcode.php:32
+msgid "You have to insert a Layout name in the shortcode"
+msgstr ""
+
+#: includes/shortcode.php:135
+msgid "All"
+msgstr ""
+
+#: includes/shortcode.php:221
+msgid "height :"
+msgstr ""
+
+#: includes/shortcode.php:221
+msgid "px"
+msgstr ""
+
+#: includes/shortcode.php:262
+msgid "Please assign post to this category."
+msgstr ""
+
+#: includes/shortcode.php:274 includes/shortcode.php:348
+msgid "No images found."
+msgstr ""
+
+#: includes/shortcode.php:354 includes/shortcode.php:357
+msgid "You have to insert a valid Layout name in the shortcode"
+msgstr ""

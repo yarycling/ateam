@@ -1,0 +1,22 @@
+.ateam-settings-wrap h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.ateam-settings-wrap .form-table th {
+    width: 200px;
+    padding: 20px 10px 20px 0;
+}
+
+.ateam-media-uploader {
+    background: #fcfcfc;
+    border: 1px solid #e5e5e5;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.ateam-media-preview img {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

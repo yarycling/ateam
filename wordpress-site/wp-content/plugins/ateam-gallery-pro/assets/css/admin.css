@@ -1,0 +1,48 @@
+/* Admin Styles for ATeam Gallery Pro */
+
+.column-image img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.column-location, .column-date {
+    font-weight: 600;
+}
+
+#gallery_item_details .inside {
+    padding: 15px;
+}
+
+#gallery_item_details label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+#gallery_item_details input[type="text"],
+#ateam_item_details input[type="date"] {
+    margin-bottom: 15px;
+}
+
+.ateam-bulk-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+    min-height: 50px;
+    padding: 15px;
+    background: #f0f0f1;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+}
+
+.preview-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+

@@ -1,0 +1,249 @@
+<?php
+/**
+ * Admin Menus
+ *
+ * @package SimpleCalendar\Admin
+ */
+namespace SimpleCalendar\Admin;
+
+if (!defined('ABSPATH')) {
+	exit();
+}
+
+// Connect submenu callback is extracted for readability.
+require_once __DIR__ . '/connect-menu.php';
+
+/**
+ * Admin Menus.
+ *
+ * Handles the plugin admin dashboard menus.
+ *
+ * @since 3.0.0
+ */
+class Menus
+{
+	/**
+	 * The main menu screen hook.
+	 *
+	 * @access public
+	 * @var string
+	 */
+	public static $main_menu = '';
+
+	/**
+	 * Plugin basename.
+	 *
+	 * @access private
+	 * @var string
+	 */
+	private static $plugin = '';
+
+	/**
+	 * Set properties.
+	 *
+	 * @since 3.0.0
+	 */
+	public function __construct()
+	{
+		self::$main_menu = 'edit.php?post_type=calendar';
+
+		add_action('admin_menu', [__CLASS__, 'add_menu_items']);
+
+		self::$plugin = plugin_basename(SIMPLE_CALENDAR_MAIN_FILE);
+
+		// Links and meta content in plugins page.
+		add_filter('plugin_action_links_' . self::$plugin, [__CLASS__, 'plugin_action_links'], 10, 5);
+		add_filter('plugin_row_meta', [__CLASS__, 'plugin_row_meta'], 10, 2);
+		// Custom text in admin footer — calendar list/edit and key SC admin pages only.
+		add_action('current_screen', [__CLASS__, 'scope_simple_calendar_footer_filters']);
+	}
+
+	/**
+	 * Register footer text filters on calendar list/edit and selected SC admin pages.
+	 *
+	 * @since 4.0.0
+	 *
+	 * @return void
+	 */
+	public static function scope_simple_calendar_footer_filters()
+	{
+		if (!function_exists('get_current_screen')) {
+			return;
+		}
+
+		$screen = get_current_screen();
+		if (!$screen || !isset($screen->id)) {
+			return;
+		}
+
+		$sc_footer_screen_ids = [
+			'calendar_page_simple-calendar_settings',
+			'calendar_page_simple-calendar_misc_settings',
+			'calendar_page_simple-calendar_tools',
+			'index_page_simple-calendar_settings',
+			'dashboard_page_simple-calendar_settings',
+		];
+
+		$is_calendar_post_screen =
+			isset($screen->post_type, $screen->base) &&
+			'calendar' === $screen->post_type &&
+			in_array($screen->base, ['edit', 'post'], true);
+
+		if (!$is_calendar_post_screen && !in_array($screen->id, $sc_footer_screen_ids, true)) {
+			return;
+		}
+
+		add_filter('admin_footer_text', '__return_empty_string', 1);
+		add_filter('update_footer', '__return_empty_string', 11);
+	}
+
+	/**
+	 * Add menu items.
+	 *
+	 * @since 3.0.0
+	 */
+	public static function add_menu_items()
+	{
+		$connect_menu_title = sprintf(
+			'%1$s <span class="sc_menu_badge_new">%2$s</span>',
+			esc_html__('Connect', 'google-calendar-events'),
+			esc_html__('New!', 'google-calendar-events'),
+		);
+
+		// Serve Connect UI on the Settings slug to preserve legacy OAuth redirect URLs:
+		// wp-admin/edit.php?post_type=calendar&page=simple-calendar_settings
+		$connect_callback = [Connect_Menu::class, 'html'];
+
+		// Register under Dashboard first so OAuth / legacy URLs using
+		// wp-admin/index.php?page=simple-calendar_connect resolve (same menu slug).
+		// Register Calendars second so $_parent_pages points at the real menu parent.
+		$connect_hook_index = add_submenu_page(
+			'index.php',
+			__('Connect', 'google-calendar-events'),
+			__('Connect', 'google-calendar-events'),
+			'manage_options',
+			'simple-calendar_settings',
+			$connect_callback,
+		);
+
+		$connect_hook = add_submenu_page(
+			self::$main_menu,
+			__('Connect', 'google-calendar-events'),
+			$connect_menu_title,
+			'manage_options',
+			'simple-calendar_settings',
+			$connect_callback,
+		);
+
+		remove_submenu_page('index.php', 'simple-calendar_settings');
+
+		foreach ([$connect_hook_index, $connect_hook] as $maybe_hook) {
+			if (!is_string($maybe_hook) || !$maybe_hook) {
+				continue;
+			}
+			add_action('load-' . $maybe_hook, [Connect_Menu::class, 'handle_actions']);
+			add_action('load-' . $maybe_hook, function () {
+				add_action('in_admin_header', [Connect_Menu::class, 'suppress_admin_notices'], 0);
+			});
+		}
+
+		// Old Settings UI lives under Misc Settings now.
+		add_submenu_page(
+			self::$main_menu,
+			__('Settings', 'google-calendar-events'),
+			__('Settings', 'google-calendar-events'),
+			'manage_options',
+			'simple-calendar_misc_settings',
+			function () {
+				$page = new Pages('settings');
+				$page->html();
+			},
+		);
+
+		add_submenu_page(
+			self::$main_menu,
+			__('Add-ons', 'google-calendar-events'),
+			__('Add-ons', 'google-calendar-events'),
+			'manage_options',
+			'simple-calendar_add_ons',
+			function () {
+				$page = new Pages('add-ons');
+				$page->html();
+			},
+		);
+
+		add_submenu_page(
+			self::$main_menu,
+			__('Tools', 'google-calendar-events'),
+			__('Tools', 'google-calendar-events'),
+			'manage_options',
+			'simple-calendar_tools',
+			function () {
+				$page = new Pages('tools');
+				$page->html();
+			},
+		);
+
+		do_action('simcal_admin_add_menu_items');
+	}
+
+	/**
+	 * Action links in plugins page.
+	 *
+	 * @since  3.0.0
+	 *
+	 * @param  array  $action_links
+	 * @param  string $file
+	 *
+	 * @return array
+	 */
+	public static function plugin_action_links($action_links, $file)
+	{
+		if (self::$plugin == $file) {
+			$links = [];
+			$links['connect'] =
+				'<a href="' .
+				admin_url('edit.php?post_type=calendar&page=simple-calendar_settings') .
+				'">' .
+				__('Connect', 'google-calendar-events') .
+				'</a>';
+			$links['feeds'] =
+				'<a href="' .
+				admin_url('edit.php?post_type=calendar') .
+				'">' .
+				__('Calendars', 'google-calendar-events') .
+				'</a>';
+
+			return apply_filters('simcal_plugin_action_links', array_merge($links, $action_links));
+		}
+
+		return $action_links;
+	}
+
+	/**
+	 * Links in plugin meta in plugins page.
+	 *
+	 * @since  3.0.0
+	 *
+	 * @param  array  $meta_links
+	 * @param  string $file
+	 *
+	 * @return array
+	 */
+	public static function plugin_row_meta($meta_links, $file)
+	{
+		if (self::$plugin == $file) {
+			$links = [];
+			$links['add-ons'] =
+				'<a href="' .
+				simcal_ga_campaign_url(simcal_get_url('addons'), 'core-plugin', 'plugin-listing') .
+				'" target="_blank" >' .
+				__('Add-ons', 'google-calendar-events') .
+				'</a>';
+
+			return apply_filters('simcal_plugin_action_links', array_merge($meta_links, $links));
+		}
+
+		return $meta_links;
+	}
+}

@@ -11,3 +11,21 @@ vendor/
 .env.*
 !.env.example
 
+wordpress-site/wp-config.php
+wordpress-site/**/wp-config.php
+wordpress-site/wp-content/uploads/
+wordpress-site/wp-content/cache/
+wordpress-site/wp-content/boost-cache/
+wordpress-site/wp-content/wpo-cache/
+wordpress-site/wp-content/upgrade/
+wordpress-site/wp-content/upgrade-temp-backup/
+wordpress-site/wp-content/wp-staging/
+wordpress-site/wp-content/ai1wm-backups/
+wordpress-site/wp-content/backup*/
+wordpress-site/**/*.log
+wordpress-site/**/php_errorlog
+wordpress-site/**/error_log
+wordpress-site/**/*.sql
+wordpress-site/**/*.sql.gz
+wordpress-site/*.sql
+wordpress-site/*.sql.gz

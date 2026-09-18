@@ -1,0 +1,2044 @@
+.inspirational.gspwp-content {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+    float: left;
+    line-height: 0;
+}
+
+/* Common style */
+.inspirational.gspwp-content figure {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+    margin: 6px;
+}
+.inspirational.gspwp-content figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+.inspirational.gspwp-content figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.inspirational.gspwp-content figure figcaption:before,
+.inspirational.gspwp-content figure figcaption:after {
+    pointer-events: none;
+}
+.inspirational.gspwp-content figure figcaption,
+.inspirational.gspwp-content figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* For some effects it will show as a button */
+.inspirational.gspwp-content figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+.inspirational.gspwp-content figure h2 {
+    word-spacing: -0.15em;
+    font-weight: bold;
+}
+.inspirational.gspwp-content figure h2,
+.inspirational.gspwp-content figure p {
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+}
+.inspirational.gspwp-content figure span,
+.inspirational.gspwp-content figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+/*---------------*/
+/***** Lily *****/
+/*---------------*/
+
+.inspirational.lily figure img {
+    max-width: none;
+    width: -webkit-calc(100% + 50px);
+    width: calc(100% + 50px);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-40px,0, 0);
+    -moz-transform: translate3d(-40px,0, 0);
+    -ms-transform: translate3d(-40px,0, 0);
+    -o-transform: translate3d(-40px,0, 0);
+    transform: translate3d(-40px,0,0);
+}
+.inspirational.lily figure figcaption {
+    text-align: left;
+}
+.inspirational.lily figure figcaption > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10% 5%;
+    width: 100%;
+}
+.inspirational.lily figure h2,
+.inspirational.lily figure p {
+    -webkit-transform: translate3d(0,40px,0);
+    -moz-transform: translate3d(0,40px,0);
+    -ms-transform: translate3d(0,40px,0);
+    -o-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+}
+.inspirational.lily figure h2 {
+    font-weight: bold;
+    padding: 10px 0;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+}
+.inspirational.lily figure p {
+    color: rgba(255,255,255,0.8);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, transform 0.35s;
+    -moz-transition: opacity 0.2s, transform 0.35s;
+    -ms-transition: opacity 0.2s, transform 0.35s;
+    -o-transition: opacity 0.2s, transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s;
+}
+.inspirational.lily figure:hover img,
+.inspirational.lily figure:hover p {
+    opacity: 1;
+}
+.inspirational.lily figure:hover img,
+.inspirational.lily figure:hover h2,
+.inspirational.lily figure:hover p {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.inspirational.lily figure:hover p {
+    -webkit-transition-delay: 0.05s;
+    -moz-transition-delay: 0.05s;
+    -ms-transition-delay: 0.05s;
+    -o-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    -webkit-transition-duration: 0.35s;
+    -moz-transition-duration: 0.35s;
+    -ms-transition-duration: 0.35s;
+    -o-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+}
+
+/*---------------*/
+/***** Sadie *****/
+/*---------------*/
+
+.inspirational.sadie figure figcaption:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+    background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+    content: '';
+    opacity: 0;
+    -webkit-transform: translate3d(0,50%,0);
+    -moz-transform: translate3d(0,50%,0);
+    -ms-transform: translate3d(0,50%,0);
+    -o-transform: translate3d(0,50%,0);
+    transform: translate3d(0,50%,0);
+}
+.inspirational.sadie figure h2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    font-weight: bold;
+    -webkit-transition: transform 0.35s, color 0.35s;
+    -moz-transition: transform 0.35s, color 0.35s;
+    -ms-transition: transform 0.35s, color 0.35s;
+    -o-transition: transform 0.35s, color 0.35s;
+    transition: transform 0.35s, color 0.35s;
+    -webkit-transform: translate3d(0,-50%,0);
+    -moz-transform: translate3d(0,-50%,0);
+    -ms-transform: translate3d(0,-50%,0);
+    -o-transform: translate3d(0,-50%,0);
+    transform: translate3d(0,-50%,0);
+}
+.inspirational.sadie figure figcaption:before,
+.inspirational.sadie figure p {
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.inspirational.sadie figure p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translate3d(0,10px,0);
+    -moz-transform: translate3d(0,10px,0);
+    -ms-transform: translate3d(0,10px,0);
+    -o-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
+}
+.inspirational.sadie figure:hover h2 {
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+    -moz-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+    -ms-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+    -o-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+.inspirational.sadie figure:hover figcaption:before ,
+.inspirational.sadie figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+/*---------------*/
+/***** Layla *****/
+/*---------------*/
+
+.inspirational.layla figure {
+    background: #18a367;
+}
+.inspirational.layla figure figcaption {
+    padding: 3em;
+}
+.inspirational.layla figure figcaption:before,
+.inspirational.layla figure figcaption:after {
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+.inspirational.layla figure figcaption:before {
+    top: 50px;
+    right: 30px;
+    bottom: 50px;
+    left: 30px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    -moz-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    -o-transform: scale(0,1);
+    transform: scale(0,1);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.inspirational.layla figure figcaption:after {
+    top: 30px;
+    right: 50px;
+    bottom: 30px;
+    left: 50px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    -moz-transform: scale(1,0);
+    -ms-transform: scale(1,0);
+    -o-transform: scale(1,0);
+    transform: scale(1,0);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    -o-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+.inspirational.layla figure h2 {
+    padding-top: 25%;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+}
+.inspirational.layla figure p {
+    padding: 0.5em 2em;
+    text-transform: none;
+    opacity: 0;
+    -webkit-transform: translate3d(0,-10px,0);
+    -moz-transform: translate3d(0,-10px,0);
+    -ms-transform: translate3d(0,-10px,0);
+    -o-transform: translate3d(0,-10px,0);
+    transform: translate3d(0,-10px,0);
+}
+.inspirational.layla figure img,
+.inspirational.layla figure h2 {
+    -webkit-transform: translate3d(0,-30px,0);
+    -moz-transform: translate3d(0,-30px,0);
+    -ms-transform: translate3d(0,-30px,0);
+    -o-transform: translate3d(0,-30px,0);
+    transform: translate3d(0,-30px,0);
+}
+.inspirational.layla figure img,
+.inspirational.layla figure figcaption:before,
+.inspirational.layla figure figcaption:after,
+.inspirational.layla figure p {
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.inspirational.layla figure:hover img {
+    opacity: 0.7;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.layla figure:hover figcaption:before,
+.inspirational.layla figure:hover figcaption:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.inspirational.layla figure:hover h2,
+.inspirational.layla figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.layla figure:hover figcaption:after,
+.inspirational.layla figure:hover h2,
+.inspirational.layla figure:hover p,
+.inspirational.layla figure:hover img {
+    -webkit-transition-delay: 0.15s;
+    -moz-transition-delay: 0.15s;
+    -ms-transition-delay: 0.15s;
+    -o-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+/*---------------*/
+/***** Zoe *****/
+/*---------------*/
+
+.inspirational.zoe figure figcaption {
+    top: auto;
+    bottom: 0;
+    padding: 1em;
+    height: 3.75em;
+    background: #ffffff;
+    color: #3c4a50;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    -moz-transform: translate3d(0,100%,0);
+    -ms-transform: translate3d(0,100%,0);
+    -o-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+
+.inspirational.zoe figure h2 {
+    float: left;
+    display: inline-block;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    -moz-transform: translate3d(0,200%,0);
+    -ms-transform: translate3d(0,200%,0);
+    -o-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+}
+.inspirational.zoe figure p {
+    position: absolute;
+    bottom: 8em;
+    padding: 2em;
+    text-transform: none;
+    font-size: 90%;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+    -webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+    -moz-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+    -ms-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+    -o-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+}
+.inspirational.zoe figure:hover p {
+    opacity: 1;
+}
+.inspirational.zoe figure:hover figcaption,
+.inspirational.zoe figure:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.zoe figure:hover h2 {
+    -webkit-transition-delay: 0.05s;
+    -moz-transition-delay: 0.05s;
+    -ms-transition-delay: 0.05s;
+    -o-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+
+/*---------------*/
+/***** Oscar *****/
+/*---------------*/
+
+.inspirational.oscar figure {
+    background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+    background: -moz-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+    background: -ms-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+    background: -o-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+    background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
+}
+.inspirational.oscar figure img {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.inspirational.oscar figure figcaption {
+    padding: 3em;
+    background-color: rgba(58,52,42,0.7);
+    -webkit-transition: background-color 0.35s;
+    -moz-transition: background-color 0.35s;
+    -ms-transition: background-color 0.35s;
+    -o-transition: background-color 0.35s;
+    transition: background-color 0.35s;
+}
+.inspirational.oscar figure figcaption:before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid #fff;
+    content: '';
+}
+.inspirational.oscar figure h2 {
+    margin: 20% 0 10px 0;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    -moz-transform: translate3d(0,100%,0);
+    -ms-transform: translate3d(0,100%,0);
+    -o-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+.inspirational.oscar figure figcaption:before,
+.inspirational.oscar figure p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.inspirational.oscar figure:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.oscar figure:hover figcaption:before,
+.inspirational.oscar figure:hover p {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.inspirational.oscar figure:hover figcaption {
+    background-color: rgba(58,52,42,0);
+}
+.inspirational.oscar figure:hover img {
+    opacity: 0.4;
+}
+
+
+/*---------------*/
+/***** Marley *****/
+/*---------------*/
+
+.inspirational.marley figure figcaption {
+    text-align: right;
+}
+.inspirational.marley figure h2,
+.inspirational.marley figure p {
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    padding: 10px 0;
+}
+.inspirational.marley figure p {
+    bottom: 30px;
+    line-height: 1.5;
+    -webkit-transform: translate3d(0,100%,0);
+    -moz-transform: translate3d(0,100%,0);
+    -ms-transform: translate3d(0,100%,0);
+    -o-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+.inspirational.marley figure h2 {
+    top: 30px;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    -moz-transform: translate3d(0,20px,0);
+    -ms-transform: translate3d(0,20px,0);
+    -o-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+.inspirational.marley figure.effect-marley:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.marley figure h2:after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    content: '';
+    -webkit-transform: translate3d(0,40px,0);
+    -moz-transform: translate3d(0,40px,0);
+    -ms-transform: translate3d(0,40px,0);
+    -o-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+}
+.inspirational.marley figure h2:after,
+.inspirational.marley figure p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.inspirational.marley figure:hover h2:after,
+.inspirational.marley figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+/*---------------*/
+/***** Ruby *****/
+/*---------------*/
+
+.inspirational.ruby figure {
+    background-color: #17819c;
+}
+.inspirational.ruby figure img {
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+}
+.inspirational.ruby figure:hover img {
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.inspirational.ruby figure h2 {
+    margin-top: 20%;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    -moz-transform: translate3d(0,20px,0);
+    -ms-transform: translate3d(0,20px,0);
+    -o-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+.inspirational.ruby figure p {
+    margin: 1em 0 0;
+    padding: 3em;
+    border: 1px solid #fff;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0) scale(1.1);
+    -moz-transform: translate3d(0,20px,0) scale(1.1);
+    -ms-transform: translate3d(0,20px,0) scale(1.1);
+    -o-transform: translate3d(0,20px,0) scale(1.1);
+    transform: translate3d(0,20px,0) scale(1.1);
+}
+.inspirational.ruby figure:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.ruby figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1);
+    -moz-transform: translate3d(0,0,0) scale(1);
+    -ms-transform: translate3d(0,0,0) scale(1);
+    -o-transform: translate3d(0,0,0) scale(1);
+    transform: translate3d(0,0,0) scale(1);
+}
+
+
+
+/*---------------*/
+/***** Roxy *****/
+/*---------------*/
+
+.inspirational.roxy figure {
+    background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
+    background: -moz-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
+    background: -ms-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
+    background: -o-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
+    background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
+}
+.inspirational.roxy figure img {
+    max-width: none;
+    width: -webkit-calc(100% + 60px);
+    width: -moz-calc(100% + 60px);
+    width: -ms-calc(100% + 60px);
+    width: -o-calc(100% + 60px);
+    width: calc(100% + 60px);
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50px,0,0);
+    -moz-transform: translate3d(-50px,0,0);
+    -ms-transform: translate3d(-50px,0,0);
+    -o-transform: translate3d(-50px,0,0);
+    transform: translate3d(-50px,0,0);
+}
+.inspirational.roxy figure figcaption:before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-20px,0,0);
+    -moz-transform: translate3d(-20px,0,0);
+    -ms-transform: translate3d(-20px,0,0);
+    -o-transform: translate3d(-20px,0,0);
+    transform: translate3d(-20px,0,0);
+}
+.inspirational.roxy figure figcaption {
+    padding: 3em;
+    text-align: left;
+}
+.inspirational.roxy figure h2 {
+    padding: 30% 0 10px 0;
+}
+.inspirational.roxy figure p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    -moz-transform: translate3d(-10px,0,0);
+    -ms-transform: translate3d(-10px,0,0);
+    -o-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+}
+.inspirational.roxy figure:hover img {
+    opacity: 0.7;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.roxy figure:hover figcaption:before,
+.inspirational.roxy figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+/*---------------*/
+/***** Bubba *****/
+/*---------------*/
+
+.inspirational.bubba figure {
+    background: #9e5406;
+}
+.inspirational.bubba figure img {
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.inspirational.bubba figure:hover img {
+    opacity: 0.4;
+}
+.inspirational.bubba figure figcaption:before,
+.inspirational.bubba figure figcaption:after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.inspirational.bubba figure figcaption:before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    -moz-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    -o-transform: scale(0,1);
+    transform: scale(0,1);
+}
+.inspirational.bubba figure figcaption:after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    -moz-transform: scale(1,0);
+    -ms-transform: scale(1,0);
+    -o-transform: scale(1,0);
+    transform: scale(1,0);
+}
+.inspirational.bubba figure h2 {
+    padding-top: 30%;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,-30%,0);
+    -moz-transform: translate3d(0,-30%,0);
+    -ms-transform: translate3d(0,-30%,0);
+    -o-transform: translate3d(0,-30%,0);
+    transform: translate3d(0,-30%,0);
+}
+
+.inspirational.bubba figure p {
+    padding: 20px 2.5em;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    -moz-transform: translate3d(0,20px,0);
+    -ms-transform: translate3d(0,20px,0);
+    -o-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+.inspirational.bubba figure:hover figcaption:before,
+.inspirational.bubba figure:hover figcaption:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.inspirational.bubba figure:hover h2,
+.inspirational.bubba figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+/*---------------*/
+/***** Romeo *****/
+/*---------------*/
+
+.inspirational.romeo figure {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
+}
+.inspirational.romeo figure img {
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,0,300px);
+    -moz-transform: translate3d(0,0,300px);
+    -ms-transform: translate3d(0,0,300px);
+    -o-transform: translate3d(0,0,300px);
+    transform: translate3d(0,0,300px);
+}
+.inspirational.romeo figure:hover img {
+    opacity: 0.6;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.romeo figure figcaption:before,
+.inspirational.romeo figure figcaption:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 1px;
+    background: #fff;
+    content: '';
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    -moz-transform: translate3d(-50%,-50%,0);
+    -ms-transform: translate3d(-50%,-50%,0);
+    -o-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+.inspirational.romeo figure:hover figcaption:before {
+    opacity: 0.5;
+    -webkit-transform: translate3d(-50%,-50%,0) rotate(45deg);
+    -moz-transform: translate3d(-50%,-50%,0) rotate(45deg);
+    -ms-transform: translate3d(-50%,-50%,0) rotate(45deg);
+    -o-transform: translate3d(-50%,-50%,0) rotate(45deg);
+    transform: translate3d(-50%,-50%,0) rotate(45deg);
+}
+.inspirational.romeo figure:hover figcaption:after {
+    opacity: 0.5;
+    -webkit-transform: translate3d(-50%,-50%,0) rotate(-45deg);
+    -moz-transform: translate3d(-50%,-50%,0) rotate(-45deg);
+    -ms-transform: translate3d(-50%,-50%,0) rotate(-45deg);
+    -o-transform: translate3d(-50%,-50%,0) rotate(-45deg);
+    transform: translate3d(-50%,-50%,0) rotate(-45deg);
+}
+.inspirational.romeo figure h2,
+.inspirational.romeo figure p {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+}
+.inspirational.romeo figure h2 {
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+    -moz-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+    -ms-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+    -o-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+}
+.inspirational.romeo figure p {
+    padding: 0.25em 2em;
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,150%,0);
+    -moz-transform: translate3d(0,-50%,0) translate3d(0,150%,0);
+    -ms-transform: translate3d(0,-50%,0) translate3d(0,150%,0);
+    -o-transform: translate3d(0,-50%,0) translate3d(0,150%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,150%,0);
+}
+.inspirational.romeo figure:hover h2 {
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+    -moz-transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+    -ms-transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+    -o-transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+}
+.inspirational.romeo figure:hover p {
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+    -moz-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+    -ms-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+    -o-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+}
+
+
+
+/*---------------*/
+/***** Dexter *****/
+/*---------------*/
+
+.inspirational.dexter figure {
+    background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+    background: -moz-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+    background: -ms-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+    background: -o-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+    background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%);
+}
+.inspirational.dexter figure img {
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.inspirational.dexter figure:hover img {
+    opacity: 0.4;
+}
+.inspirational.dexter figure figcaption:after {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px);
+    border: 7px solid #fff;
+    content: '';
+    -webkit-transition: -webkit-transform 0.35s;
+    -moz-transition: -webkit-transform 0.35s;
+    -ms-transition: -webkit-transform 0.35s;
+    -o-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,-100%,0);
+    -moz-transform: translate3d(0,-100%,0);
+    -ms-transform: translate3d(0,-100%,0);
+    -o-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+}
+.inspirational.dexter figure:hover figcaption:after {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.dexter figure figcaption {
+    padding: 3em;
+    text-align: left;
+}
+.inspirational.dexter figure p {
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+    left: 60px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,-100px,0);
+    -moz-transform: translate3d(0,-100px,0);
+    -ms-transform: translate3d(0,-100px,0);
+    -o-transform: translate3d(0,-100px,0);
+    transform: translate3d(0,-100px,0);
+}
+.inspirational.dexter figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+/*---------------*/
+/***** Sarah *****/
+/*---------------*/
+
+.inspirational.sarah figure {
+    background: #42b078;
+}
+.inspirational.sarah figure img {
+    max-width: none;
+    width: -webkit-calc(100% + 20px);
+    width: -moz-calc(100% + 20px);
+    width: -ms-calc(100% + 20px);
+    width: -o-calc(100% + 20px);
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    -moz-transform: translate3d(-10px,0,0);
+    -ms-transform: translate3d(-10px,0,0);
+    -o-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.inspirational.sarah figure:hover img {
+    opacity: 0.4;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.sarah figure figcaption {
+    text-align: left;
+}
+.inspirational.sarah figure h2 {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5em 0;
+}
+.inspirational.sarah figure h2:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    content: '';
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(-100%,0,0);
+    -moz-transform: translate3d(-100%,0,0);
+    -ms-transform: translate3d(-100%,0,0);
+    -o-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+}
+.inspirational.sarah figure:hover h2:after {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.sarah figure p {
+    padding: 1em 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(100%,0,0);
+    -moz-transform: translate3d(100%,0,0);
+    -ms-transform: translate3d(100%,0,0);
+    -o-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+.inspirational.sarah figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+/*---------------*/
+/***** Chico *****/
+/*---------------*/
+
+.inspirational.chico figure img {
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.12);
+    -moz-transform: scale(1.12);
+    -o-transform: scale(1.12);
+    transform: scale(1.12);
+}
+.inspirational.chico figure:hover img {
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.inspirational.chico figure figcaption {
+    padding: 3em;
+}
+.inspirational.chico figure figcaption:before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid #fff;
+    content: '';
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.inspirational.chico figure figcaption:before,
+.inspirational.chico figure p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.inspirational.chico figure h2 {
+    padding: 20% 0 20px 0;
+}
+.inspirational.chico figure p {
+    margin: 0 auto;
+    max-width: 200px;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.inspirational.chico figure:hover figcaption:before,
+.inspirational.chico figure:hover p {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+@media screen and (max-width: 50em) {
+    .inspirational.gspwp-content {
+        text-align: center;
+    }
+    .inspirational.chico figure {
+        display: inline-block;
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+    }
+}
+
+
+/*---------------*/
+/***** Milo *****/
+/*---------------*/
+
+.inspirational.milo figure {
+    background: #2e5d5a;
+}
+.inspirational.milo figure img {
+    max-width: none;
+    width: -webkit-calc(100% + 60px);
+    width: -moz-calc(100% + 60px);
+    width: -ms-calc(100% + 60px);
+    width: -o-calc(100% + 60px);
+    width: calc(100% + 60px);
+    opacity: 1;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-30px,0,0) scale(1.12);
+    -moz-transform: translate3d(-30px,0,0) scale(1.12);
+    -ms-transform: translate3d(-30px,0,0) scale(1.12);
+    -o-transform: translate3d(-30px,0,0) scale(1.12);
+    transform: translate3d(-30px,0,0) scale(1.12);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.inspirational.milo figure:hover img {
+    opacity: 0.5;
+    -webkit-transform: translate3d(0,0,0) scale(1);
+    -moz-transform: translate3d(0,0,0) scale(1);
+    -ms-transform: translate3d(0,0,0) scale(1);
+    -o-transform: translate3d(0,0,0) scale(1);
+    transform: translate3d(0,0,0) scale(1);
+}
+.inspirational.milo figure h2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1em 1.2em;
+}
+.inspirational.milo figure p {
+    padding: 0 10px 0 0;
+    width: 50%;
+    border-right: 1px solid #fff;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-40px,0,0);
+    -moz-transform: translate3d(-40px,0,0);
+    -ms-transform: translate3d(-40px,0,0);
+    -o-transform: translate3d(-40px,0,0);
+    transform: translate3d(-40px,0,0);
+}
+.inspirational.milo figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+/*---------------*/
+/***** Julia *****/
+/*---------------*/
+
+.inspirational.julia figure {
+    background: #2f3238;
+}
+.inspirational.julia figure img {
+    height: 400px;
+    -webkit-transition: opacity 1s, transform 1s;
+    -moz-transition: opacity 1s, transform 1s;
+    -ms-transition: opacity 1s, transform 1s;
+    -o-transition: opacity 1s, transform 1s;
+    transition: opacity 1s, transform 1s;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.inspirational.julia figure figcaption {
+    text-align: left;
+}
+.inspirational.julia figure h2 {
+    position: relative;
+    padding: 0.5em 0;
+}
+.inspirational.julia figure p {
+    display: inline-block;
+    margin: 0 0 0.25em;
+    padding: 0.4em 1em;
+    background: rgba(255,255,255,0.9);
+    color: #2f3238;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 75%;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transition-delay: 0.15s;
+    -moz-transition-delay: 0.15s;
+    -ms-transition-delay: 0.15s;
+    -o-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+    -webkit-transform: translate3d(-120%,0,0);
+    -moz-transform: translate3d(-120%,0,0);
+    -ms-transform: translate3d(-120%,0,0);
+    -o-transform: translate3d(-120%,0,0);
+    transform: translate3d(-120%,0,0);
+}
+.inspirational.julia figure:hover p {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.inspirational.julia figure:hover img {
+    opacity: 0.4;
+    -webkit-transform: scale3d(1.1,1.1,1);
+    -moz-transform: scale3d(1.1,1.1,1);
+    -ms-transform: scale3d(1.1,1.1,1);
+    -o-transform: scale3d(1.1,1.1,1);
+    transform: scale3d(1.1,1.1,1);
+}
+.inspirational.julia figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+/*-----------------*/
+/***** Goliath *****/
+/*-----------------*/
+
+.inspirational.goliath figure {
+    background: #df4e4e;
+}
+.inspirational.goliath figure img,
+.inspirational.goliath figure h2 {
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+}
+.inspirational.goliath figure img {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.inspirational.goliath figure h2,
+.inspirational.goliath figure p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+}
+.inspirational.goliath figure p {
+    text-transform: none;
+    font-size: 90%;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,50px,0);
+    -moz-transform: translate3d(0,50px,0);
+    -ms-transform: translate3d(0,50px,0);
+    -o-transform: translate3d(0,50px,0);
+    transform: translate3d(0,50px,0);
+}
+.inspirational.goliath figure:hover img {
+    -webkit-transform: translate3d(0,-120px,0);
+    -moz-transform: translate3d(0,-120px,0);
+    -ms-transform: translate3d(0,-120px,0);
+    -o-transform: translate3d(0,-120px,0);
+    transform: translate3d(0,-120px,0);
+}
+.inspirational.goliath figure:hover h2 {
+    -webkit-transform: translate3d(0,-100px,0);
+    -moz-transform: translate3d(0,-100px,0);
+    -ms-transform: translate3d(0,-100px,0);
+    -o-transform: translate3d(0,-100px,0);
+    transform: translate3d(0,-100px,0);
+}
+.inspirational.goliath figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+/*-----------------*/
+/***** Selena *****/
+/*-----------------*/
+
+.inspirational.selena figure {
+    background: #ffffff;
+}
+.inspirational.selena figure img {
+    opacity: 0.95;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.inspirational.selena figure:hover img {
+    -webkit-transform: scale3d(0.95,0.95,1);
+    -moz-transform: scale3d(0.95,0.95,1);
+    -ms-transform: scale3d(0.95,0.95,1);
+    -o-transform: scale3d(0.95,0.95,1);
+    transform: scale3d(0.95,0.95,1);
+}
+.inspirational.selena figure h2 {
+    margin-bottom: 10px;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    -moz-transform: translate3d(0,20px,0);
+    -ms-transform: translate3d(0,20px,0);
+    -o-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+.inspirational.selena figure p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: perspective(1000px) rotate3d(1,0,0,90deg);
+    -moz-transform: perspective(1000px) rotate3d(1,0,0,90deg);
+    -ms-transform: perspective(1000px) rotate3d(1,0,0,90deg);
+    -o-transform: perspective(1000px) rotate3d(1,0,0,90deg);
+    transform: perspective(1000px) rotate3d(1,0,0,90deg);
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    -o-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+}
+.inspirational.selena figure:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.selena figure:hover p {
+    opacity: 1;
+    -webkit-transform: perspective(1000px) rotate3d(1,0,0,0);
+    -moz-transform: perspective(1000px) rotate3d(1,0,0,0);
+    -mos-transform: perspective(1000px) rotate3d(1,0,0,0);
+    -o-transform: perspective(1000px) rotate3d(1,0,0,0);
+    transform: perspective(1000px) rotate3d(1,0,0,0);
+}
+
+
+/*-----------------*/
+/***** Apollo *****/
+/*-----------------*/
+.inspirational.apollo figure.effect-apollo img {
+    opacity: 0.95;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -p-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.05,1.05,1);
+    -moz-transform: scale3d(1.05,1.05,1);
+    -ms-transform: scale3d(1.05,1.05,1);
+    -o-transform: scale3d(1.05,1.05,1);
+    transform: scale3d(1.05,1.05,1);
+}
+.inspirational.apollo figure figcaption:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    content: '';
+    -webkit-transition: -webkit-transform 0.6s;
+    -moz-transition: -webkit-transform 0.6s;
+    -ms-transition: -webkit-transform 0.6s;
+    -o-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+    -moz-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+    -ms-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+    -o-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+.inspirational.apollo figure span {
+    line-height: 1.5;
+    float: left;
+    text-transform: none;
+}
+.inspirational.apollo figure p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 3em;
+    padding: 0 1em;
+    max-width: 80%;
+    border-right: 4px solid #fff;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.inspirational.apollo figure h2 {
+    text-align: left;
+}
+.inspirational.apollo figure:hover img {
+    opacity: 0.6;
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+.inspirational.apollo figure:hover figcaption:before {
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+    -moz-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+    -ms-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+    -o-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+.inspirational.apollo figure:hover p {
+    opacity: 1;
+    -moz-transition-delay: 0.1s;
+    -ms-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+
+/*-----------------*/
+/***** Steve *****/
+/*-----------------*/
+
+.inspirational.steve .figure {
+    z-index: auto;
+    overflow: visible;
+    background: #000000;
+}
+.inspirational.steve figure:before,
+.inspirational.steve figure h2:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    content: '';
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.inspirational.steve figure:before {
+    box-shadow: 0 3px 30px rgba(0,0,0,0.8);
+    opacity: 0;
+}
+.inspirational.steve figure figcaption {
+    z-index: 1;
+}
+.inspirational.steve figure img {
+    opacity: 1;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: perspective(1000px) translate3d(0,0,0);
+    -moz-transform: perspective(1000px) translate3d(0,0,0);
+    -ms-transform: perspective(1000px) translate3d(0,0,0);
+    -o-transform: perspective(1000px) translate3d(0,0,0);
+    transform: perspective(1000px) translate3d(0,0,0);
+}
+.inspirational.steve figure h2,
+.inspirational.steve figure p {
+    background: #ffffff;
+    color: #2d434e;
+}
+.inspirational.steve figure h2 {
+    position: relative;
+    margin-top: 10%;
+    padding: 0.25em;
+}
+.inspirational.steve figure h2:before {
+    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+}
+.inspirational.steve figure p {
+    margin-top: 1em;
+    padding: 0.5em;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(0.9,0.9,1);
+    -moz-transform: scale3d(0.9,0.9,1);
+    -ms-transform: scale3d(0.9,0.9,1);
+    -o-transform: scale3d(0.9,0.9,1);
+    transform: scale3d(0.9,0.9,1);
+}
+.inspirational.steve figure:hover:before {
+    opacity: 1;
+}
+.inspirational.steve figure:hover img {
+    -webkit-transform: perspective(1000px) translate3d(0,0,21px);
+    -moz-transform: perspective(1000px) translate3d(0,0,21px);
+    -ms-transform: perspective(1000px) translate3d(0,0,21px);
+    -o-transform: perspective(1000px) translate3d(0,0,21px);
+    transform: perspective(1000px) translate3d(0,0,21px);
+}
+.inspirational.steve figure:hover h2:before {
+    opacity: 0;
+}
+.inspirational.steve figure:hover p {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+
+
+/*-----------------*/
+/***** Moses *****/
+/*-----------------*/
+
+.inspirational.moses figure {
+    background: -webkit-linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
+    background: -moz-linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
+    background: -ms-linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
+    background: -o-linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
+    background: linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
+}
+.inspirational.moses figure img {
+    opacity: 0.85;
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.inspirational.moses figure h2,
+.inspirational.moses figure p {
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    border: 2px solid #fff;
+}
+.inspirational.moses figure h2 {
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    text-align: left;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(10px,10px,0);
+    -moz-transform: translate3d(10px,10px,0);
+    -ms-transform: translate3d(10px,10px,0);
+    -o-transform: translate3d(10px,10px,0);
+    transform: translate3d(10px,10px,0);
+}
+.inspirational.moses figure p {
+    float: right;
+    padding: 20px;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    -moz-transform: translate3d(-50%,-50%,0);
+    -ms-transform: translate3d(-50%,-50%,0);
+    -o-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+.inspirational.moses figure:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.moses figure:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.inspirational.moses figure:hover img {
+    opacity: 0.6;
+}
+
+
+/*---------------*/
+/***** Jazz *****/
+/*---------------*/
+
+.inspirational.jazz figure {
+    background: -webkit-linear-gradient(-45deg, #f3cf3f 0%,#f33f58 100%);
+    background: -moz-linear-gradient(-45deg, #f3cf3f 0%,#f33f58 100%);
+    background: -ms-linear-gradient(-45deg, #f3cf3f 0%,#f33f58 100%);
+    background: -o-linear-gradient(-45deg, #f3cf3f 0%,#f33f58 100%);
+    background: linear-gradient(-45deg, #f3cf3f 0%,#f33f58 100%);
+}
+.inspirational.jazz figure img {
+    opacity: 0.9;
+}
+.inspirational.jazz figure figcaption:after,
+.inspirational.jazz figure img,
+.inspirational.jazz figure p {
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.inspirational.jazz figure figcaption:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
+    -moz-transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
+    -ms-transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
+    -o-transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
+    transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.inspirational.jazz figure h2,
+.inspirational.jazz figure p {
+    opacity: 1;
+    -webkit-transform: scale3d(0.8,0.8,1);
+    -moz-transform: scale3d(0.8,0.8,1);
+    -ms-transform: scale3d(0.8,0.8,1);
+    -o-transform: scale3d(0.8,0.8,1);
+    transform: scale3d(0.8,0.8,1);
+}
+.inspirational.jazz figure h2 {
+    padding-top: 26%;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+}
+.inspirational.jazz figure p {
+    padding: 0.5em 2em;
+    text-transform: none;
+    font-size: 0.85em;
+    opacity: 0;
+}
+.inspirational.jazz figure:hover img {
+    opacity: 0.7;
+    -webkit-transform: scale3d(1.05,1.05,1);
+    -moz-transform: scale3d(1.05,1.05,1);
+    -ms-transform: scale3d(1.05,1.05,1);
+    -o-transform: scale3d(1.05,1.05,1);
+    transform: scale3d(1.05,1.05,1);
+}
+.inspirational.jazz figure:hover figcaption:after {
+    opacity: 1;
+    -webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+    -moz-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+    -ms-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+    -o-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+    transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+}
+.inspirational.jazz figure:hover h2,
+.inspirational.jazz figure:hover p {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+
+
+/*---------------*/
+/***** Ming *****/
+/*---------------*/
+
+.inspirational.ming figure {
+    background: #030c17;
+}
+.inspirational.ming figure img {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.inspirational.ming figure figcaption:before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 30px rgba(255,255,255,0.2);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.4,1.4,1);
+    -moz-transform: scale3d(1.4,1.4,1);
+    -ms-transform: scale3d(1.4,1.4,1);
+    -o-transform: scale3d(1.4,1.4,1);
+    transform: scale3d(1.4,1.4,1);
+}
+.inspirational.ming figure h2 {
+    margin: 20% 0 10px 0;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+}
+.inspirational.ming figure p {
+    padding: 1em;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -transform 0.35s;
+    -moz-transition: opacity 0.35s, -transform 0.35s;
+    -ms-transition: opacity 0.35s, -transform 0.35s;
+    -o-transition: opacity 0.35s, -transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.inspirational.ming figure:hover h2 {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+}
+.inspirational.ming figure:hover figcaption:before,
+.inspirational.ming figure:hover p {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+.inspirational.ming figure:hover figcaption {
+    background-color: rgba(58,52,42,0);
+}
+.inspirational.ming figure:hover img {
+    opacity: 0.4;
+}
+
+
+
+/*---------------*/
+/***** Duke *****/
+/*---------------*/
+
+.inspirational.duke figure {
+    background: -webkit-linear-gradient(-45deg, #34495e 0%,#cc6055 100%);
+    background: -moz-linear-gradient(-45deg, #34495e 0%,#cc6055 100%);
+    background: -ms-linear-gradient(-45deg, #34495e 0%,#cc6055 100%);
+    background: -o-linear-gradient(-45deg, #34495e 0%,#cc6055 100%);
+    background: linear-gradient(-45deg, #34495e 0%,#cc6055 100%);
+}
+
+.inspirational.duke figure img,
+.inspirational.duke figure p {
+    -webkit-transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, transform 0.35s;
+    -ms-transition: opacity 0.35s, transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.inspirational.duke figure:hover img {
+    opacity: 0.1;
+    -webkit-transform: scale3d(2,2,1);
+    -moz-transform: scale3d(2,2,1);
+    -ms-transform: scale3d(2,2,1);
+    -o-transform: scale3d(2,2,1);
+    transform: scale3d(2,2,1);
+}
+.inspirational.duke figure h2 {
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -ms-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: scale3d(0.8,0.8,1);
+    -moz-transform: scale3d(0.8,0.8,1);
+    -ms-transform: scale3d(0.8,0.8,1);
+    -o-transform: scale3d(0.8,0.8,1);
+    transform: scale3d(0.8,0.8,1);
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+.inspirational.duke figure p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid #fff;
+    text-transform: none;
+    font-size: 90%;
+    opacity: 0;
+    -moz-transform: scale3d(0.8,0.8,1);
+    -ms-transform: scale3d(0.8,0.8,1);
+    -o-transform: scale3d(0.8,0.8,1);
+    transform: scale3d(0.8,0.8,1);
+    -webkit-transform-origin: 50% -100%;
+    -moz-transform-origin: 50% -100%;
+    -ms-transform-origin: 50% -100%;
+    -o-transform-origin: 50% -100%;
+    transform-origin: 50% -100%;
+}
+.inspirational.duke figure:hover h2,
+.inspirational.duke figure:hover p {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+/* Media queries */
+@media screen and (max-width: 50em) {
+    .gspwp_content {
+        padding: 0 10px;
+        text-align: center;
+    }
+    .inspirational.duke figure {
+        display: inline-block;
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+    }
+}
