@@ -8,3 +8,30 @@ Version: 1.0.0
 Text Domain: stotage-child
 */
 
+.ateam-vip-home-section {
+    background: #080000;
+    margin: 0;
+    margin-left: calc(50% - 50vw);
+    overflow: hidden;
+    width: 100vw;
+}
+
+.ateam-vip-home-section a {
+    display: block;
+    text-decoration: none;
+}
+
+.ateam-vip-home-section img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .ateam-vip-home-section img {
+        max-width: none;
+        transform: translateX(-25%);
+        width: 175%;
+    }
+}

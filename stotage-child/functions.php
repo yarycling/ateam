@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('STOTAGE_CHILD_VERSION', '1.0.9');
+define('STOTAGE_CHILD_VERSION', '1.0.10');
 define('STOTAGE_CHILD_DIR', get_stylesheet_directory());
 define('STOTAGE_CHILD_URI', get_stylesheet_directory_uri());
 
