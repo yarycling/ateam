@@ -118,9 +118,12 @@ class ATV_Admin {
 		$created_posts = array();
 		foreach ( $attachment_ids as $attachment_id ) {
 			$title = get_the_title( $attachment_id );
+			$attachment = get_post( $attachment_id );
+			$description = $attachment ? $attachment->post_content : '';
 			
 			$post_id = wp_insert_post( array(
 				'post_title'   => $title,
+				'post_content' => $description,
 				'post_status'  => 'publish',
 				'post_type'    => 'atv_video',
 			) );
@@ -162,7 +165,13 @@ class ATV_Admin {
 	public function render_video_metabox( $post ) {
 		$attachment_id = get_post_meta( $post->ID, '_atv_attachment_id', true );
 		$video_url = $attachment_id ? wp_get_attachment_url( $attachment_id ) : '';
+		wp_nonce_field( 'atv_video_details', 'atv_video_details_nonce' );
 		?>
+		<div class="atv-metabox-field">
+			<label for="atv-video-description"><strong>Video Description:</strong></label>
+			<textarea id="atv-video-description" name="atv_video_description" class="widefat" rows="5" style="margin-top:8px;"><?php echo esc_textarea( $post->post_content ); ?></textarea>
+			<p class="description">This description appears in the video lightbox/player details.</p>
+		</div>
 		<div class="atv-metabox-field">
 			<label>Current Video URL:</label>
 			<input type="text" class="widefat" readonly value="<?php echo esc_url( $video_url ); ?>">
@@ -194,7 +203,29 @@ class ATV_Admin {
 	}
 
 	public function save_video_metabox( $post_id ) {
-		// Not much to save here as it's set during bulk upload, 
-		// but could add manual selection here later.
+		if ( ! isset( $_POST['atv_video_details_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['atv_video_details_nonce'] ) ), 'atv_video_details' ) ) {
+			return;
+		}
+
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+			return;
+		}
+
+		if ( ! current_user_can( 'edit_post', $post_id ) ) {
+			return;
+		}
+
+		if ( ! isset( $_POST['atv_video_description'] ) ) {
+			return;
+		}
+
+		$description = wp_kses_post( wp_unslash( $_POST['atv_video_description'] ) );
+
+		remove_action( 'save_post_atv_video', array( $this, 'save_video_metabox' ) );
+		wp_update_post( array(
+			'ID' => $post_id,
+			'post_content' => $description,
+		) );
+		add_action( 'save_post_atv_video', array( $this, 'save_video_metabox' ) );
 	}
 }

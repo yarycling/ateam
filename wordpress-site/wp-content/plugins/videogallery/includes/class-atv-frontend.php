@@ -50,10 +50,11 @@ class ATV_Frontend {
 			while ( $videos->have_posts() ) {
 				$videos->the_post();
 				$views = get_post_meta( get_the_ID(), '_atv_views', true ) ?: 0;
+				$attachment_id = get_post_meta( get_the_ID(), '_atv_attachment_id', true );
 				$result[] = array(
 					'id' => get_the_ID(),
 					'title' => get_the_title(),
-					'desc' => get_the_content(),
+					'desc' => wp_strip_all_tags( get_the_content() ),
 					'video_url' => wp_get_attachment_url( $attachment_id ),
 					'thumbnail' => get_the_post_thumbnail_url( get_the_ID(), 'medium' ) ?: ATV_VG_URL . 'assets/images/video-placeholder.jpg',
 					'cat_id' => $cat_id,
@@ -116,6 +117,7 @@ class ATV_Frontend {
 									$thumbnail = get_the_post_thumbnail_url( get_the_ID(), 'medium' ) ?: ATV_VG_URL . 'assets/images/video-placeholder.jpg';
 									$views = get_post_meta( get_the_ID(), '_atv_views', true ) ?: 0;
 									$time_ago = human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) . ' ago';
+									$description = wp_strip_all_tags( get_the_content() );
 									
 									$video_cats = wp_get_post_terms( get_the_ID(), 'atv_category', array( 'fields' => 'ids' ) );
 									$cat_data = ! is_wp_error( $video_cats ) ? implode( ',', $video_cats ) : '';
@@ -126,7 +128,7 @@ class ATV_Frontend {
 											 data-id="<?php the_ID(); ?>" 
 											 data-video-url="<?php echo esc_url( $video_url ); ?>"
 											 data-title="<?php echo esc_attr( get_the_title() ); ?>"
-											 data-desc="<?php echo esc_attr( get_the_content() ); ?>"
+											 data-desc="<?php echo esc_attr( $description ); ?>"
 											 data-categories="<?php echo esc_attr( $cat_data ); ?>">
 									<div class="atv-video-thumb-wrapper">
 										<img src="<?php echo esc_url( $thumbnail ); ?>" alt="<?php the_title(); ?>">
@@ -180,12 +182,13 @@ class ATV_Frontend {
 									$video_url = wp_get_attachment_url( $attachment_id );
 									$thumbnail = get_the_post_thumbnail_url( get_the_ID(), 'medium' ) ?: ATV_VG_URL . 'assets/images/video-placeholder.jpg';
 									$views = get_post_meta( get_the_ID(), '_atv_views', true ) ?: 0;
+									$description = wp_strip_all_tags( get_the_content() );
 									?>
 									<div class="atv-sidebar-item atv-video-card" 
 										 data-id="<?php the_ID(); ?>" 
 										 data-video-url="<?php echo esc_url( $video_url ); ?>"
 										 data-title="<?php echo esc_attr( get_the_title() ); ?>"
-										 data-desc="<?php echo esc_attr( get_the_content() ); ?>">
+										 data-desc="<?php echo esc_attr( $description ); ?>">
 										<div class="atv-sidebar-thumb">
 											<img src="<?php echo esc_url( $thumbnail ); ?>" alt="<?php the_title(); ?>">
 											<div class="atv-sidebar-play-overlay">
